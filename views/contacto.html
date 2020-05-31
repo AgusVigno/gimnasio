@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>LaPlataGym</title>
+</head>
+<body>
+
+    <!-- header del sitio -->
+    <header>
+        <a href="../index.html">
+            <img src="../assets/img/logo.jpeg" alt="logo">
+        </a>
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./clases.html">Clases</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav> 
+    </header>
+    <!-- fin del header -->
+
+    <h2>Contacto</h2>
+
+    <!-- Ejemplo de Formulario de Contacto -->
+    <form action="#" method="get"> <!-- podria usarse POST para que no sean visibles en la URL -->
+        <fieldset>
+            <legend>Información Personal</legend>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <br>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" placeholder="Apellido">
+            <br>
+            <br>
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" placeholder="Correo">
+            <br>
+            <br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" name="telefono" placeholder="Telefono">
+            <br>
+            <br>
+            <label for="sexo">Sexo:</label>
+            <input type="radio" name="sexo" value="hombre">Hombre
+            <input type="radio" name="sexo" value="mujer">Mujer
+            <br>
+            <br>
+            <label for="talle">Ocupación:</label>
+            <select name="talle" id="talle">
+                <option value="1">Estudiante</option>
+                <option value="2">Empleado</option>
+                <option value="3">Desocupado</option>
+                <option value="4">Otro</option>
+                <option value="" disabled selected>--Seleccione--</option>
+            </select>
+            <br>
+            <br>
+            <input type="checkbox">
+            <label for="terminos">Deseo recibir el newsletter</label>
+            <br>
+            <br>
+            <label for="fecha">Fecha:</label>
+            <input type="date">
+            <br>
+            <br>
+            <label for="hora">Hora:</label>
+            <input type="time">
+            <br>
+            <br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" cols="50" rows="10"></textarea>
+            <br>
+            <br>
+            <input type="reset" value="Limpiar">
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+
+</body>
+</html>
