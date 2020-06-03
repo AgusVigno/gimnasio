@@ -32,7 +32,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 h1 {
-    font-size: 4.5rem;
+    font-size: 8rem;
 }
 h2 {
     color: var(--colorPrimario);
@@ -58,7 +58,10 @@ video {
     height: auto;
 }
 .seccion{
-    padding: 5rem 0;
+    padding: 2.5rem 0;
+}
+.encabezado{
+    margin: 2rem 0 4rem 0;
 }
 .contenedor{
     max-width: 120rem;
@@ -70,10 +73,11 @@ video {
     font-size: 1.8rem;
 }
 nav {
-    word-spacing: 1rem;
+    word-spacing: 2rem;
 }
-/** Home **/
-.site-header{
+
+/** Header **/
+.siteHeader{
     background-image: url(../img/gym-hero.jpg);
     background-position: center center;
     background-size: cover;
@@ -81,20 +85,68 @@ nav {
     min-height: 60rem;
     color: #ffffff;
 }
-nav a{
+.siteHeader ul li{
+    display: inline-block;
+    margin-right: 2.5rem;
+    position: relative;
+}
+.siteHeader ul li a{
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--blanco);
+    font-weight: bold;
     font-size: 1.8rem;
 }
-.site-header p{
+.siteHeader ul li:hover ul{
+    display: block;
+}
+.submenu{
+    display: none;
+}
+.submenu li{
+    margin-bottom: 1rem;
+    position: relative;
+    left: 13rem;
+}
+.siteHeader p{
     font-size: 1.8rem;
+}
+.barra img{
+    width: 20rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 1rem;
+}
+.barra ul{
+    position: absolute;
+    top: 5rem;
+    right: 6rem;
+}
+.contenidoHeader{
+    position: absolute;
+    top: 45%;
+    left: 30%;
+    text-align: center;
 }
 
 /* Seccion Bienvenida */
+.bienvenida{
+    padding-top: 3.5rem;
+}
 .bienvenida p{
     margin-top: 3rem;
     font-size: 1.8rem;
 }
+
+/* Seccion Áreas */
+.areas li{
+    display: inline-block;
+    width: 24.5%;
+}
+.areas li img{
+    max-width: 100%;
+}
+
 
 /* Seccion Clases */
 .clases a{
@@ -103,17 +155,30 @@ nav a{
     font-size: 2rem;
     text-transform: uppercase;
 }
+.clases ul li{
+    display: inline-block;
+    width: 49.5%;
+}
+.clases ul li img{
+    max-width: 100%;
+}
 
 /* Imagen tipo parallax */
 .imagen-parallax{
-    background-color: var(--grisOscuro);
-    height: 20rem;
+    height: 60rem;
+    background-image: url(../img/gym-parallax.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.imagen-parallax p{
-    padding: 5rem 0;
-    margin: 0 auto;
-    font-size: 5rem;
-    color: var(--blanco);
+
+/* Seccion Instructores */
+.instructores ul li{
+    display: inline-block;
+    width: 49.5%;
+}
+.clases ul li img{
+    max-width: 100%;
 }
 
 /* Seccion Mapa */
@@ -135,6 +200,13 @@ nav a{
     font-size: 2rem;
     text-transform: uppercase;
 }
+.blog ul li{
+    display: inline-block;
+    width: 49.5%;
+}
+.blog ul li img{
+    max-width: 100%;
+}
 
 /* Seccion Sorteo */
 .sorteo{
@@ -145,6 +217,26 @@ nav a{
     color: var(--blanco);
     text-transform: uppercase;
     margin-bottom: 2rem;
+}
+
+/* Seccion Entrenamiento */
+.contenidoEntrenamiento video,
+.contenidoEntrenamiento p{
+    display: inline-block;
+    width: 49%;
+}
+.contenidoEntrenamiento p{
+    font-size: 2rem;
+    line-height: 2;
+    position: relative;
+    top: -6rem;
+    padding-right: 6rem;
+}
+
+/* Seccion Galeria */
+.galeria ul li{
+    display: inline-block;
+    width: 24.5%;
 }
 
 /* Seccion Newsletter */
@@ -160,18 +252,42 @@ nav a{
     color: var(--blanco);
     text-transform: uppercase;
     font-size: 2rem;
+    position: relative;
+    left: 47%;
+    top: 8rem;
+}
+.newsletter p{
+    position: relative;
+    left: 40%;
+}
+.newsletter h3{
+    position: relative;
+    left: 43%;
+    font-size: 5rem;
+    top: 4rem;
 }
 
 /* Seccion Footer */
-.site-footer{
+.siteFooter{
     padding-top: 3rem;
     background-color: var(--grisOscuro);
 }
-.site-footer p{
+.siteFooter p{
     color: var(--blanco);
-    font-size: 1.8rem;
+    font-size: 2rem;
+    position: relative;
+    left: 70%;
+    top: -4rem;
 }
-
+.siteFooter nav{
+    position: relative;
+    left: 5rem;
+}
+footer nav a{
+    font-size: 2.2rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
 
 /** PAGINAS INTERNAS **/
 

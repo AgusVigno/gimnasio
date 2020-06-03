@@ -9,20 +9,29 @@
 </head>
 <body>
     <!-- site-header -->
-    <header class="site-header">
-        <a href="./index.html">
-            <img src="#" alt="logo">
-        </a>
-        <nav>
-            <a href="./index.html">Inicio</a>
-            <a href="views/nosotros.html">Nosotros</a>
-            <a href="views/clases.html">Clases</a>
-            <a href="views/blog.html">Blog</a>
-            <a href="views/contacto.html">Contacto</a>
-        </nav>  
-
-        <h1>Logra tus metas</h1>
-        <p>La fuerza no viene de una capacidad física. Viene de una voluntad indomable<em> - Mahatma Gandhi</em></p>
+    <header class="siteHeader">
+        <div class="barra">
+            <a href="./index.html">
+                <img src="./assets/img/logo.png" alt="logo">
+            </a>
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="views/nosotros.html">Nosotros</a></li>
+                <li><a href="views/clases.html">Clases</a>
+                    <ul class="submenu">
+                        <li><a href="#">Zumba</a></li>
+                        <li><a href="#">Fitness</a></li>
+                        <li><a href="#">Crossfit</a></li>
+                    </ul>
+                </li>
+                <li><a href="views/blog.html">Blog</a></li>
+                <li><a href="views/contacto.html">Contacto</a></li>
+            </ul>  
+        </div>
+        <div class="contenidoHeader">
+            <h1>Logra tus metas</h1>
+            <p>La fuerza no viene de una capacidad física. Viene de una voluntad indomable<em> - Mahatma Gandhi</em></p>
+        </div>
     </header> 
     
 
@@ -34,21 +43,21 @@
     </section> 
 
     <!-- seccion areas del gimnasio -->
-    <div class="seccion">
-        <ul class="areas">
+    <div class="seccion areas">
+        <ul>
             <li class="area">
                 <img src="./assets/img/area-cardio.jpg" alt="area cardio">
                 <p>Area cardio</p>
             </li>
-            <li class="area">
+            <li>
                 <img src="./assets/img/area-estiramiento.jpg" alt="area estiramiento">
                 <p>Area estiramiento</p>
             </li>
-            <li class="area">
+            <li>
                 <img src="./assets/img/area-pesas2.jpg" alt="area pesas libres">
                 <p>Area pesas libres</p>
             </li>
-            <li class="area">
+            <li>
                 <img src="./assets/img/area-fitness.jpg" alt="area fitness">
                 <p>Area fitness funcional</p>
             </li>
@@ -57,27 +66,29 @@
 
     <!-- seccion de las clases, contenido principal del sitio -->
     <main class="contenedor seccion clases">
-        <h2>Nuestras Clases</h2>
-        <p class="subtitulo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias animi pariatur, magnam maxime, quos labore aliquid.</p>
+        <div class="encabezado">
+            <h2>Nuestras Clases</h2>
+            <p class="subtitulo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias animi pariatur, magnam maxime, quos labore aliquid.</p>
+        </div>
         <ul>
             <li>
-                <h3>Zumba</h3>
-                <img src="./assets/img/clase-zumba.jpg" alt="clase zumba">
-                <p>Martes y Jueves - 18:00 a 19:00 horas</p>
-            </li>
-            <li>
-                <h3>Levantamiento de pesas</h3>
                 <img src="./assets/img/clase-pesas.jpg" alt="clase levantamiento pesas">
+                <h3>Levantamiento de pesas</h3>
                 <p>Todos los días - 15:00 a 17:00 horas</p>
             </li>
             <li>
-                <h3>Fitness</h3>
+                <img src="./assets/img/clase-zumba.jpg" alt="clase zumba">
+                <h3>Zumba</h3>
+                <p>Martes y Jueves - 18:00 a 19:00 horas</p>
+            </li>
+            <li>
                 <img src="./assets/img/clase-fitness.jpg" alt="clase fitness">
+                <h3>Fitness</h3>
                 <p>Lunes y Miércoles - 10:00 a 11:30 horas</p>
             </li>
             <li>
-                <h3>Body Combat</h3>
                 <img src="./assets/img/clase-body.jpg" alt="clase body combat">
+                <h3>Body Combat</h3>
                 <p>Mates y Viernes - 20:00 a 21:00 horas</p>
             </li>
         </ul>
@@ -86,12 +97,14 @@
 
     <!-- imagen del gym del tipo parallax -->
     <div class="imagen-parallax">
-        <p>IMAGEN TIPO PARALLAX</p>
+
     </div>
 
-    <section class="contenedor seccion">
-        <h2>Nuestros Instructores</h2>
-        <p class="subtitulo">Instructores profesionales que te ayudarán a lograr tus objetivos</p>
+    <section class="contenedor seccion instructores">
+        <div class="encabezado">
+            <h2>Nuestros Instructores</h2>
+            <p class="subtitulo">Instructores profesionales que te ayudarán a lograr tus objetivos</p>
+        </div>
         <ul>
             <li>
                 <img src="./assets/img/instructor1.jpg" alt="imagen instructor">
@@ -119,27 +132,29 @@
 
     <!-- seccion del blog -->
     <section class="contenedor seccion blog">
-        <h2>Nuestro Blog</h2>
-        <p class="subtitulo"> Aprende tips de nuestros instructores expertos</p>
+        <div class="encabezado">
+            <h2>Nuestro Blog</h2>
+            <p class="subtitulo"> Aprende tips de nuestros instructores expertos, con los mejores consejos teniendo en cuenta sus experiencias</p>
+        </div>
         <ul>
             <li>
-                <h3>Lorem ipsum dolor sit amet</h3>
                 <img src="./assets/img/blog1.jpg" alt="imagen blog">
+                <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
             <li>
-                <h3>Lorem ipsum dolor sit amet</h3>
                 <img src="./assets/img/blog2.jpg" alt="imagen blog">
+                <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
             <li>
-                <h3>Lorem ipsum dolor sit amet</h3>
                 <img src="./assets/img/blog3.jpg" alt="imagen blog">
+                <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
             <li>
-                <h3>Lorem ipsum dolor sit amet</h3>
                 <img src="./assets/img/blog4.jpg" alt="imagen blog">
+                <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
         </ul>
@@ -162,21 +177,27 @@
 
     <!-- seccion de video de entrenamiento -->
     <section class="contenedor seccion entrenamiento">
-        <h2>Persigue tus sueños</h2>
-        <video controls autoplay loop preload="auto">
-            <!-- <source src="video.ogv" type="video/ogv" /> -->
-            <source src="./assets/video/entrenamiento.mp4" type="video/mp4" />
-            <!-- <source src="video.webm" type="video/webm" /> -->
-            <p>Tu navegador probablemente no soporte HTML5</p>
-        </video>
+        <div class="encabezado">
+            <h2>Persigue tus sueños</h2>
+        </div>
+        <div class="contenidoEntrenamiento">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe soluta illum sequi, vero, repellat iusto officiis possimus velit eum commodi quis obcaecati quidem sapiente placeat ex laboriosam magnam molestias?</p>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe soluta illum sequi, vero, repellat iusto officiis possimus velit eum commodi quis obcaecati quidem sapiente placeat ex laboriosam magnam molestias?</p>
+            <video controls autoplay loop preload="auto">
+                <!-- <source src="video.ogv" type="video/ogv" /> -->
+                <source src="./assets/video/entrenamiento.mp4" type="video/mp4" />
+                <!-- <source src="video.webm" type="video/webm" /> -->
+                <p>Tu navegador probablemente no soporte HTML5</p>
+            </video>
+        </div>
     </section>
 
     <!-- seccion de galería de imagenes -->
-    <section class="contenedor seccion">
-        <h2>Galeria</h2>
-        <p class="subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ad sapiente aspernatur debitis libero.</p>
+    <section class="contenedor seccion galeria">
+        <div class="encabezado">
+            <h2>Galeria</h2>
+            <p class="subtitulo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi ad sapiente aspernatur debitis libero.</p>
+        </div>
         <ul>
             <li>
                 <img src="#" alt="imagen galeria">
@@ -220,7 +241,7 @@
     </div>
 
 	<!-- site-footer -->
-	<footer class="site-footer">
+	<footer class="siteFooter">
 		<nav>
             <a href="./index.html">Inicio</a>
             <a href="views/nosotros.html">Nosotros</a>
@@ -229,7 +250,7 @@
             <a href="views/contacto.html">Contacto</a>
         </nav>
 
-        <p>Todos los Derechos Reservados 2020 &copy; </p>
+        <p> - Todos los Derechos Reservados 2020 &copy; </p>
     </footer>
 </body>
 </html>
