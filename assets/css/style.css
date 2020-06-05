@@ -5,7 +5,7 @@
     --fuenteTexto : 'Open Sans', sans-serif;
 
     /** Colores **/
-    --colorPrimario : #FF5B00;
+    --colorPrimario : #FE4918;
     --grisOscuro : #2F2E2E;
     --grisClaro : #EBEBEB;
     --blanco : #ffffff;
@@ -85,42 +85,27 @@ nav {
     min-height: 60rem;
     color: #ffffff;
 }
-.siteHeader ul li{
-    display: inline-block;
-    margin-right: 2.5rem;
-    position: relative;
+.siteHeader nav{
+    margin-top: 2rem;
 }
-.siteHeader ul li a{
+.siteHeader nav a{
     text-transform: uppercase;
     color: var(--blanco);
     font-weight: bold;
     font-size: 1.8rem;
-}
-.siteHeader ul li:hover ul{
-    display: block;
-}
-.submenu{
-    display: none;
-}
-.submenu li{
-    margin-bottom: 1rem;
-    position: relative;
-    left: 13rem;
+    margin-right: 2rem;
 }
 .siteHeader p{
     font-size: 1.8rem;
 }
+.barra{
+    display: flex;
+    justify-content: space-between;
+}
 .barra img{
     width: 20rem;
     height: auto;
-    position: absolute;
-    top: 0;
-    left: 1rem;
-}
-.barra ul{
-    position: absolute;
-    top: 5rem;
-    right: 6rem;
+    flex: 0 0 50%;
 }
 .contenidoHeader{
     position: absolute;
@@ -163,14 +148,27 @@ nav {
     max-width: 100%;
 }
 
-/* Imagen tipo parallax */
-.imagen-parallax{
+/* Seccion info resumen del gym */
+.resumen{
     height: 60rem;
     background-image: url(../img/gym-parallax.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
 }
+.resumenInfo{
+    display: flex;
+    justify-content: space-between;
+}
+.resumenInfo li{
+    list-style: none;
+	font-size: 1.8rem;
+	text-align: center;
+	text-transform: uppercase;
+    flex: 0 0 25%;
+    font-weight: bold;
+    color: var(--blanco);
+;}
 
 /* Seccion Instructores */
 .instructores ul li{
@@ -183,14 +181,7 @@ nav {
 
 /* Seccion Mapa */
 .mapa{
-    background-color: var(--grisOscuro);
-    height: 20rem;
-}
-.mapa p{
-    padding: 5rem 0;
-    margin: 0 auto;
-    font-size: 5rem;
-    color: var(--blanco);
+    height: 50rem;
 }
 
 /* Seccion Blog */
@@ -210,13 +201,29 @@ nav {
 
 /* Seccion Sorteo */
 .sorteo{
-    background-color: var(--grisOscuro);
+    background-color: var(--blanco);
 }
-.sorteo ul li{
-    font-size: 1.8rem;
-    color: var(--blanco);
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+.sorteo h2{
+    color: var(--negro);
+    margin-bottom: 4rem;
+}
+.cuentaRegresiva{
+    display: flex;
+    justify-content: space-between;
+}
+.cuentaRegresiva li{
+    list-style: none;
+	font-size: 1.8rem;
+	text-align: center;
+	text-transform: uppercase;
+    flex: 0 0 25%;
+    font-weight: bold;
+}
+.numero{
+    color: var(--colorPrimario);
+	font-size: 10rem;
+	margin: 0 0 1rem 0;
+	font-family: 'Oswald', sans-serif;
 }
 
 /* Seccion Entrenamiento */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>LaPlataGym</title>
 </head>
@@ -14,19 +15,13 @@
             <a href="./index.html">
                 <img src="./assets/img/logo.png" alt="logo">
             </a>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="views/nosotros.html">Nosotros</a></li>
-                <li><a href="views/clases.html">Clases</a>
-                    <ul class="submenu">
-                        <li><a href="#">Zumba</a></li>
-                        <li><a href="#">Fitness</a></li>
-                        <li><a href="#">Crossfit</a></li>
-                    </ul>
-                </li>
-                <li><a href="views/blog.html">Blog</a></li>
-                <li><a href="views/contacto.html">Contacto</a></li>
-            </ul>  
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="views/nosotros.html">Nosotros</a>
+                <a href="views/clases.html">Clases</a>
+                <a href="views/blog.html">Blog</a>
+                <a href="views/contacto.html">Contacto</a>
+            </nav>  
         </div>
         <div class="contenidoHeader">
             <h1>Logra tus metas</h1>
@@ -44,7 +39,7 @@
 
     <!-- seccion areas del gimnasio -->
     <div class="seccion areas">
-        <ul>
+        <ul class="contenedorAreas">
             <li class="area">
                 <img src="./assets/img/area-cardio.jpg" alt="area cardio">
                 <p>Area cardio</p>
@@ -95,9 +90,16 @@
         <a href="./views/clases.html">Ver todas las clases</a>
     </main>
 
-    <!-- imagen del gym del tipo parallax -->
-    <div class="imagen-parallax">
-
+    <!-- resumen de la info del gym -->
+    <div class="resumen">
+        <div class="contenedor">
+            <ul class="resumenInfo">
+                <li><p class="numero"></p>areas</li>
+                <li><p class="numero"></p>clases</li>
+                <li><p class="numero"></p>profes</li>
+                <li><p class="numero"></p>posts</li>
+            </ul>
+        </div>
     </div>
 
     <section class="contenedor seccion instructores">
@@ -125,10 +127,7 @@
         </ul>
     </section>
     
-    <div class="mapa">
-        <p>MAPA DEL GIMNASIO</p>
-        <!-- ubicacion de mapa utilizando JS -->
-    </div>
+    <div id="mapa" class="mapa"></div>
 
     <!-- seccion del blog -->
     <section class="contenedor seccion blog">
@@ -161,18 +160,7 @@
         <a href="./views/blog.html">Ver todo</a>
     </section>
        
-    <!-- seccion cuenta regresiva al sorteo -->
-    <section class="seccion sorteo">
-        <h2>Próximo sorteo</h2>
-        <!-- se insertará por JS un contador que diga dias, horas, minutos y segundos faltantes -->
-        
-        <ul>
-            <li>días</li>
-            <li>horas</li>
-            <li>minutos</li>
-            <li>segundos</li>
-        </ul>
-    </section>
+    
 
 
     <!-- seccion de video de entrenamiento -->
@@ -240,6 +228,19 @@
         <a href="#">suscribirme</a>
     </div>
 
+    <!-- seccion cuenta regresiva al sorteo -->
+    <section class="seccion sorteo">
+        <h2>Próximo sorteo</h2>
+        <!-- se insertará por JS un contador que diga dias, horas, minutos y segundos faltantes -->
+        
+        <ul class="cuentaRegresiva contenedor">
+            <li><p id="dias" class="numero"></p>días</li>
+            <li><p id="horas" class="numero"></p>horas</li>
+            <li><p id="minutos" class="numero"></p>minutos</li>
+            <li><p id="segundos" class="numero"></p>segundos</li>
+        </ul>
+    </section>
+
 	<!-- site-footer -->
 	<footer class="siteFooter">
 		<nav>
@@ -252,5 +253,10 @@
 
         <p> - Todos los Derechos Reservados 2020 &copy; </p>
     </footer>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
