@@ -129,8 +129,19 @@ nav {
 .contenedorAreas{
     display: flex;
 }
-.contenedorAreas li{
+.area{
     flex: 0 0 25%;
+    position: relative;
+    display: inline-block;
+}
+.area p{
+    position: absolute;
+    left: 2rem;
+    bottom: 0;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--blanco);
 }
 
 /* Seccion Clases */
@@ -141,6 +152,20 @@ nav {
 }
 .clase{
     flex: 0 0 calc(50% - 5rem);
+    position: relative;
+    margin-bottom: 2rem;
+}
+.clase h3{
+    position: absolute;
+    left: 1rem;
+    bottom: 4rem;
+    color: var(--blanco);
+}
+.clase p{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--blanco);
 }
 .verClases{
     display: flex;
@@ -151,6 +176,7 @@ nav {
     color: var(--negro);
     font-size: 2rem;
     text-transform: uppercase;
+    margin-top: 2rem;
 }
 
 /* Seccion info resumen del gym */
@@ -165,6 +191,7 @@ nav {
 .resumenInfo{
     display: flex;
     justify-content: space-between;
+    margin-top: 17%
 }
 .resumenInfo li{
     list-style: none;
@@ -184,6 +211,14 @@ nav {
 }
 .instructor{
     flex: 0 0 calc(50% - 5rem);
+    position: relative;
+    margin-bottom: 2rem;
+}
+.instructor h3{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: var(--blanco);
 }
 
 /* Seccion Mapa */
@@ -199,6 +234,20 @@ nav {
 }
 .post{
     flex: 0 0 calc(50% - 5rem);
+    position: relative;
+    margin-bottom: 2rem;
+}
+.post h3{
+    position: absolute;
+    left: 1rem;
+    bottom: 3rem;
+    color: var(--blanco);
+}
+.post p{
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    color: var(--blanco);
 }
 .button a{
     background-color: var(--colorPrimario);

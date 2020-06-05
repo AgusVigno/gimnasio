@@ -1,11 +1,22 @@
 La idea es incorporarle cualquier otra idea que proponga el profe o tutora!
 
 
-
 Falta aplicar cuando lo veamos en clase:
+- Hacer en sitio responsive con media query
 - Grids en CSS
 - Animaciones, Transiciones y Transformaciones en CSS
 - Frameworks CSS + Bootstrap
 - Bootstrap + Themes
 - SASS
 - Servidor, Seguridad y SEO
+
+
+
+
+- Dejar el Menu fijado en la parte superior.
+- Links a las redes sociales con iconos.
+- Modal con Mailchimp para el envio de correo.
+- Hacer la galeria de imagenes con librería.
+- Cambiar imagen parallax.
+- Agregar favicon
+- Ver tamaño de imagenes.

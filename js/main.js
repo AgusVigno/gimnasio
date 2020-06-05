@@ -15,9 +15,9 @@
         }
 
         // Animaciones Numeros
-        $('.resumenInfo li:nth-child(1) p').animateNumber({ number: 6 }, 1200);
-        $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 15 }, 1200);
-        $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 3 }, 1500);
+        $('.resumenInfo li:nth-child(1) p').animateNumber({ number: 4 }, 1200);
+        $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 13 }, 1200);
+        $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 4 }, 1500);
         $('.resumenInfo li:nth-child(4) p').animateNumber({ number: 9 }, 1500);
 
         // Cuenta Regresiva
