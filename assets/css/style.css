@@ -38,6 +38,7 @@ h2 {
     color: var(--colorPrimario);
     font-size: 3.4rem;
     text-align: center;
+    text-transform: uppercase;
 }
 h3 {
     font-size: 3rem;
@@ -54,8 +55,7 @@ ul {
 }
 img,
 video {
-    max-width: 50rem;
-    height: auto;
+    max-width: 100%;
 }
 .seccion{
     padding: 2.5rem 0;
@@ -99,6 +99,8 @@ nav {
     font-size: 1.8rem;
 }
 .barra{
+    max-width: 160rem;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -124,33 +126,37 @@ nav {
 }
 
 /* Seccion Áreas */
-.areas li{
-    display: inline-block;
-    width: 24.5%;
+.contenedorAreas{
+    display: flex;
 }
-.areas li img{
-    max-width: 100%;
+.contenedorAreas li{
+    flex: 0 0 25%;
 }
-
 
 /* Seccion Clases */
+.contenedorClases{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.clase{
+    flex: 0 0 calc(50% - 5rem);
+}
+.verClases{
+    display: flex;
+    justify-content: end;
+}
 .clases a{
     padding-top: 2rem;
     color: var(--negro);
     font-size: 2rem;
     text-transform: uppercase;
 }
-.clases ul li{
-    display: inline-block;
-    width: 49.5%;
-}
-.clases ul li img{
-    max-width: 100%;
-}
 
 /* Seccion info resumen del gym */
 .resumen{
     height: 60rem;
+    margin-top: 10rem;
     background-image: url(../img/gym-parallax.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -171,12 +177,13 @@ nav {
 ;}
 
 /* Seccion Instructores */
-.instructores ul li{
-    display: inline-block;
-    width: 49.5%;
+.contenedorInstructores{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.clases ul li img{
-    max-width: 100%;
+.instructor{
+    flex: 0 0 calc(50% - 5rem);
 }
 
 /* Seccion Mapa */
@@ -185,20 +192,32 @@ nav {
 }
 
 /* Seccion Blog */
-.blog a{
-    padding-top: 2rem;
-    color: var(--negro);
+.contenedorBlog{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.post{
+    flex: 0 0 calc(50% - 5rem);
+}
+.button a{
+    background-color: var(--colorPrimario);
+    padding: 2rem 4rem;
+	text-align: center;
+    color: var(--blanco);
     font-size: 2rem;
     text-transform: uppercase;
+    float: right;
+    border: 1px solid var(--negor);
+    font-weight: bold;
+    border-radius: 1rem;
+    transition: backgroundcolor .5s ease-in-out;
 }
-.blog ul li{
-    display: inline-block;
-    width: 49.5%;
+.button a:hover{
+    background-color: #e33000;
+    cursor: pointer;
 }
-.blog ul li img{
-    max-width: 100%;
-}
-
+    
 /* Seccion Sorteo */
 .sorteo{
     background-color: var(--blanco);
@@ -227,17 +246,23 @@ nav {
 }
 
 /* Seccion Entrenamiento */
-.contenidoEntrenamiento video,
-.contenidoEntrenamiento p{
-    display: inline-block;
-    width: 49%;
+.contenidoEntrenamiento{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contenidoEntrenamiento p,
+.contenidoEntrenamiento video{
+    flex: 0 0 calc(50% - 5rem);
 }
 .contenidoEntrenamiento p{
     font-size: 2rem;
     line-height: 2;
-    position: relative;
-    top: -6rem;
     padding-right: 6rem;
+    margin: auto;
+}
+.contenidoEntrenamiento video{
+    max-width: 60rem;
+    margin-left: 5rem;
 }
 
 /* Seccion Galeria */
@@ -254,46 +279,60 @@ nav {
     height: 30rem;
     background-color: var(--grisOscuro);
     color: var(--blanco);
-}
-.newsletter a{
-    color: var(--blanco);
-    text-transform: uppercase;
-    font-size: 2rem;
-    position: relative;
-    left: 47%;
-    top: 8rem;
-}
-.newsletter p{
-    position: relative;
-    left: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 .newsletter h3{
-    position: relative;
-    left: 43%;
     font-size: 5rem;
-    top: 4rem;
+    margin-bottom: 5rem;
 }
 
 /* Seccion Footer */
 .siteFooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding-top: 3rem;
     background-color: var(--grisOscuro);
 }
-.siteFooter p{
-    color: var(--blanco);
-    font-size: 2rem;
-    position: relative;
-    left: 70%;
-    top: -4rem;
+.siteMenu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .siteFooter nav{
-    position: relative;
-    left: 5rem;
+    display: flex;
 }
 footer nav a{
     font-size: 2.2rem;
     color: var(--blanco);
     text-transform: uppercase;
+    margin: auto 2rem;
+}
+.redesMenu{
+    border: .3rem solid var(--colorPrimario);
+    border-radius: 1rem;
+    margin: 1rem;
+}
+.redesMenu h3{
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+}
+.redesMenu span{
+    color: var(--colorPrimario);
+}
+.redesMenu a{
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+p.copyright{
+    color: var(--blanco);
+	padding: 1rem 0;
+	text-align: center;
+	background-color: #2e2e2e;
 }
 
 /** PAGINAS INTERNAS **/

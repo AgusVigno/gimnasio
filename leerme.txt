@@ -1,0 +1,11 @@
+La idea es incorporarle cualquier otra idea que proponga el profe o tutora!
+
+
+
+Falta aplicar cuando lo veamos en clase:
+- Grids en CSS
+- Animaciones, Transiciones y Transformaciones en CSS
+- Frameworks CSS + Bootstrap
+- Bootstrap + Themes
+- SASS
+- Servidor, Seguridad y SEO

@@ -65,29 +65,31 @@
             <h2>Nuestras Clases</h2>
             <p class="subtitulo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias animi pariatur, magnam maxime, quos labore aliquid.</p>
         </div>
-        <ul>
-            <li>
+        <ul class="contenedorClases">
+            <li class="clase">
                 <img src="./assets/img/clase-pesas.jpg" alt="clase levantamiento pesas">
                 <h3>Levantamiento de pesas</h3>
                 <p>Todos los días - 15:00 a 17:00 horas</p>
             </li>
-            <li>
+            <li class="clase">
                 <img src="./assets/img/clase-zumba.jpg" alt="clase zumba">
                 <h3>Zumba</h3>
                 <p>Martes y Jueves - 18:00 a 19:00 horas</p>
             </li>
-            <li>
+            <li class="clase">
                 <img src="./assets/img/clase-fitness.jpg" alt="clase fitness">
                 <h3>Fitness</h3>
                 <p>Lunes y Miércoles - 10:00 a 11:30 horas</p>
             </li>
-            <li>
+            <li class="clase">
                 <img src="./assets/img/clase-body.jpg" alt="clase body combat">
                 <h3>Body Combat</h3>
                 <p>Mates y Viernes - 20:00 a 21:00 horas</p>
             </li>
         </ul>
-        <a href="./views/clases.html">Ver todas las clases</a>
+        <div class="button">
+            <a href="./views/clases.html">Ver todas las clases</a>
+        </div>
     </main>
 
     <!-- resumen de la info del gym -->
@@ -107,20 +109,20 @@
             <h2>Nuestros Instructores</h2>
             <p class="subtitulo">Instructores profesionales que te ayudarán a lograr tus objetivos</p>
         </div>
-        <ul>
-            <li>
+        <ul class="contenedorInstructores">
+            <li class="instructor">
                 <img src="./assets/img/instructor1.jpg" alt="imagen instructor">
                 <p>Informacion del Instructor</p>
             </li>
-            <li>
+            <li class="instructor">
                 <img src="./assets/img/instructor2.jpg" alt="imagen instructor">
                 <p>Informacion del Instructor</p>
             </li>
-            <li>
+            <li class="instructor">
                 <img src="./assets/img/instructor3.jpg" alt="imagen instructor">
                 <p>Informacion del Instructor</p>
             </li>
-            <li>
+            <li class="instructor">
                 <img src="./assets/img/instructor4.jpg" alt="imagen instructor">
                 <p>Informacion del Instructor</p>
             </li>
@@ -135,29 +137,31 @@
             <h2>Nuestro Blog</h2>
             <p class="subtitulo"> Aprende tips de nuestros instructores expertos, con los mejores consejos teniendo en cuenta sus experiencias</p>
         </div>
-        <ul>
-            <li>
+        <ul class="contenedorBlog">
+            <li class="post">
                 <img src="./assets/img/blog1.jpg" alt="imagen blog">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
-            <li>
+            <li class="post">
                 <img src="./assets/img/blog2.jpg" alt="imagen blog">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
-            <li>
+            <li class="post">
                 <img src="./assets/img/blog3.jpg" alt="imagen blog">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
-            <li>
+            <li class="post">
                 <img src="./assets/img/blog4.jpg" alt="imagen blog">
                 <h3>Lorem ipsum dolor sit amet</h3>
                 <p>Autor: <span>Lorem ipsum dolor</span></p>
             </li>
         </ul>
-        <a href="./views/blog.html">Ver todo</a>
+        <div class="button">
+            <a href="./views/blog.html">Ver todo</a>
+        </div>
     </section>
        
     
@@ -167,6 +171,7 @@
     <section class="contenedor seccion entrenamiento">
         <div class="encabezado">
             <h2>Persigue tus sueños</h2>
+            <p class="subtitulo"> Aprende tips de nuestros instructores expertos, con los mejores consejos teniendo en cuenta sus experiencias</p>
         </div>
         <div class="contenidoEntrenamiento">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo saepe soluta illum sequi, vero, repellat iusto officiis possimus velit eum commodi quis obcaecati quidem sapiente placeat ex laboriosam magnam molestias?</p>
@@ -225,7 +230,9 @@
         <p>suscribite al newsletter y participá de increíbles sorteos</p>
 
         <h3>laplatagym</h3>
-        <a href="#">suscribirme</a>
+        <div class="button">
+            <a href="#">suscribirme</a>
+        </div>
     </div>
 
     <!-- seccion cuenta regresiva al sorteo -->
@@ -243,16 +250,29 @@
 
 	<!-- site-footer -->
 	<footer class="siteFooter">
-		<nav>
-            <a href="./index.html">Inicio</a>
-            <a href="views/nosotros.html">Nosotros</a>
-            <a href="views/clases.html">Clases</a>
-            <a href="views/blog.html">Blog</a>
-            <a href="views/contacto.html">Contacto</a>
-        </nav>
-
-        <p> - Todos los Derechos Reservados 2020 &copy; </p>
+        <div class="siteMenu">
+            <nav>
+                <a href="./index.html">Inicio</a>
+                <a href="views/nosotros.html">Nosotros</a>
+                <a href="views/clases.html">Clases</a>
+                <a href="views/blog.html">Blog</a>
+                <a href="views/contacto.html">Contacto</a>
+            </nav>
+            <div class="redesMenu">
+                <h3>Redes <span>sociales</span></h3>
+                <nav class="redes-sociales">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Youtube</a>
+                    <a href="#">Correo</a>
+                    <a href="#">Whatsapp</a>
+                </nav>
+            </div>
+        </div>
+		<p class="copyright">GYMLAPLATA - Todos los Derechos Reservados 2020 &copy;</p>
     </footer>
+
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
