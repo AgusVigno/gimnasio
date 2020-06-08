@@ -31,3 +31,20 @@
     });
 })();
 
+$(function(){
+    //Menu Flotante en la parte superior
+
+    var alturaVentana = $(window).height();
+    var algutaBarra = $('.barra').innerHeight();
+
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+
+        if(scroll > alturaVentana){
+            $('.barra').addClass('fixed');
+        }else{
+            $('.barra').removeClass('fixed');
+        }
+    });
+});
+
