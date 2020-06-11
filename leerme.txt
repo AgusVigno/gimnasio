@@ -1,15 +1,20 @@
-La idea es incorporarle cualquier otra idea que proponga el profe o tutora!
+Para esta entrega, se utilizó la programación "Mobile First", teniendo en cuenta 3 dispositivos:
+    1. Telefono celular             480px
+    2. Tablet                       768px
+    3. Notebook/Escritorio          992px
+
+
+Se aplico CSS Grid en la sección de Galería.
+Se aplico Flexbox en el resto de las secciones.
 
 
 Falta aplicar cuando lo veamos en clase:
-- Hacer el sitio responsive con medias query
-- Grids en CSS para aplicar mas que nada en la Galería
 - Animaciones, Transiciones y Transformaciones en CSS
 - Frameworks CSS + Bootstrap
 - Bootstrap + Themes
 - SASS
 - Servidor, Seguridad y SEO
+- Completar el resto de las secciones html.
 
-Mejoras a aplicar:
-- Cambiar el logo, o mejorar su estilo.
-- Permitir la suscrición al newsletter por medio de Mailchimp
+
+La idea es incorporarle cualquier otra idea que proponga el profe o tutora!

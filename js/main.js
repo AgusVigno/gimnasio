@@ -14,12 +14,6 @@
                 .openPopup();
         }
 
-        // Animaciones Numeros
-        $('.resumenInfo li:nth-child(1) p').animateNumber({ number: 4 }, 1200);
-        $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 13 }, 1200);
-        $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 4 }, 1500);
-        $('.resumenInfo li:nth-child(4) p').animateNumber({ number: 9 }, 1500);
-
         // Cuenta Regresiva
         $('.cuentaRegresiva').countdown('2020/07/20 10:00:00', function(event){
             $('#dias').html(event.strftime('%D'));
@@ -27,24 +21,38 @@
             $('#minutos').html(event.strftime('%M'));
             $('#segundos').html(event.strftime('%S'));
         });
-
     });
 })();
 
 $(function(){
-    //Menu Flotante en la parte superior
-
-    var alturaVentana = $(window).height();
-    var algutaBarra = $('.barra').innerHeight();
-
+    var barraAltura = $('.barra').innerHeight();
+    
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
-
-        if(scroll > alturaVentana){
+        
+        //menu flotante en la parte superior
+        if(scroll > barraAltura){
             $('.barra').addClass('fixed');
+            $('.siteHeader').css({ 'padding-top': '9.9rem'});
         }else{
             $('.barra').removeClass('fixed');
+            $('.siteHeader').css({ 'padding-top':'0px'});
         }
+
+    });
+
+    //menu responsive
+    $('.menuMovil').on('click', function(){
+        $('.navegacionPrincipal').slideToggle();
+    });
+
+    //animacion de numeros en resumen
+    $('#resumenClick').on('click', function(){
+        $('.resumenInfo').css({'display': 'flex'});
+
+        $('.resumenInfo li:nth-child(1) p').animateNumber({ number: 7 }, 1200);
+        $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 19 }, 1200);
+        $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 5 }, 1500);
+        $('.resumenInfo li:nth-child(4) p').animateNumber({ number: 23 }, 1500); 
     });
 });
-

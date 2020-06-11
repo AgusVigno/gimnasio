@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>LaPlataGym</title>
+    <title>laplataGYM</title>
 </head>
 <body>
     <!-- site-header -->
@@ -15,7 +15,12 @@
             <a href="./index.html">
                 <img src="./assets/img/logo.png" alt="logo">
             </a>
-            <nav>
+            <div class="menuMovil">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+            <nav class="navegacionPrincipal">
                 <a href="./index.html">Inicio</a>
                 <a href="views/nosotros.html">Nosotros</a>
                 <a href="views/clases.html">Clases</a>
@@ -49,7 +54,7 @@
                 <p>Area estiramiento</p>
             </li>
             <li class="area">
-                <img src="./assets/img/area-pesas2.jpg" alt="area pesas libres">
+                <img src="./assets/img/area-pesas.jpg" alt="area pesas libres">
                 <p>Area pesas libres</p>
             </li>
             <li class="area">
@@ -102,6 +107,7 @@
                 <li><p class="numero"></p>posts</li>
             </ul>
         </div>
+        <button id="resumenClick" type="button">Haceme Click!!</button>
     </div>
 
     <section class="contenedor seccion instructores">
@@ -190,34 +196,34 @@
         </div>
         <ul>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria6.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria18.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria3.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria19.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria16.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria17.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria11.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria8.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria12.jpg" alt="imagen galeria">
             </li>
             <li>
-                <img src="#" alt="imagen galeria">
+                <img src="./assets/img/galeria5.jpg" alt="imagen galeria">
             </li>
         </ul>
     </section>
@@ -226,7 +232,7 @@
     <div class="newsletter seccion">
         <p>suscribite al newsletter y participá de increíbles sorteos</p>
 
-        <h3>laplatagym</h3>
+        <h3>laplataGYM</h3>
         <div class="button">
             <a href="#">suscribirme</a>
         </div>
@@ -248,13 +254,6 @@
 	<!-- site-footer -->
 	<footer class="siteFooter">
         <div class="siteMenu">
-            <nav class="footerMenu">
-                <a href="./index.html">Inicio</a>
-                <a href="views/nosotros.html">Nosotros</a>
-                <a href="views/clases.html">Clases</a>
-                <a href="views/blog.html">Blog</a>
-                <a href="views/contacto.html">Contacto</a>
-            </nav>
             <div class="redesSociales">
                 <h3>Redes <span>sociales</span></h3>
                 <nav>
@@ -266,8 +265,15 @@
                     <a href="#">Whatsapp</a>
                 </nav>
             </div>
+            <nav class="footerMenu">
+                <a href="./index.html">Inicio</a>
+                <a href="views/nosotros.html">Nosotros</a>
+                <a href="views/clases.html">Clases</a>
+                <a href="views/blog.html">Blog</a>
+                <a href="views/contacto.html">Contacto</a>
+            </nav>
         </div>
-		<p class="copyright">GYMLAPLATA - Todos los Derechos Reservados 2020 &copy;</p>
+		<p class="copyright">Copyright &copy; 2020 laplataGYM. Todos los derechos reservados.</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>

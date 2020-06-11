@@ -8,7 +8,7 @@
     --colorPrimario : #FE4918;
     --grisOscuro : #2F2E2E;
     --grisClaro : #EBEBEB;
-    --blanco : #ffffff;
+    --blanco : #FFFFFF;
     --negro : #000000;
 }
 
@@ -72,46 +72,131 @@ video {
     text-align: center;
     font-size: 1.8rem;
 }
-nav {
-    word-spacing: 2rem;
+
+/** HEADER **/
+/* Navegacion Principal */
+.navegacionPrincipal{
+	display: none;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+	.navegacionPrincipal{
+		display: block;
+		width: 67%;
+		float: right;
+		text-align: right;
+	}	
+}
+.navegacionPrincipal a{
+    display: block;
+    max-width: 100%;
+    font-family: var(--fuentePrincipal);
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    color: var(--blanco);
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+@media (min-width: 768px) {
+    .navegacionPrincipal a{
+        padding: 1rem 1rem;
+        display: inline-block;
+        width: auto;
+        text-align: center;
+        margin: .5rem 1rem 0 0;
+    }
+}
+@media (min-width: 992px) {
+    .navegacionPrincipal a{
+        font-size: 2rem;
+    }    
+}
+.navegacionPrincipal a:hover{
+    background-color: var(--colorPrimario);
+    padding: 1rem .5rem;
+    border-radius: .5rem;
 }
 
-/** Header **/
+/* Menu Movil */
+.menuMovil{
+	display: block;
+	width: 6rem;
+	float: right;
+	text-align: right;
+	margin: 1rem 2rem;
+}
+@media (min-width: 768px) {
+	.menuMovil{
+		display: none;
+	}
+}
+.menuMovil:hover{
+	cursor: pointer;
+}
+.menuMovil span{
+	background-color: #ffffff;
+	margin-top: 6px;
+	height: 8px;
+	display: block;
+}
+
 .siteHeader{
     background-image: url(../img/gym-hero.jpg);
     background-position: center center;
     background-size: cover;
     height: 100vh;
     min-height: 60rem;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-}
-.siteHeader nav a{
-    text-transform: uppercase;
-    color: var(--colorPrimario);
-    font-weight: bold;
-    font-size: 1.8rem;
-    margin-right: 3rem;
-    transition: all .4s ease-in-out;
-}
-.siteHeader nav a:hover{
-    border: 1px solid var(--colorPrimario);
     color: var(--blanco);
-    font-size: 2rem;
-    padding: 1rem .5rem;
-    background-color: var(--colorPrimario);
-    border-radius: .5rem;
-}
-.siteHeader p{
-    font-size: 1.8rem;
 }
 .barra{
-    margin: 0 auto;
     display: flex;
+    width:100%;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    width:100%;
+    margin: 0 auto;
+}
+.barra a{
+    flex: 0 0 50%;
+}
+@media (min-width: 768px) {
+    .barra a {
+        flex: 0 0 20%;
+    }
+    .navegacionPrincipal{
+        flex: 0 0 80%;
+    }
+    .navegacionPrincipal a{
+        font-size: 2rem;
+        margin-right: 1.5rem;
+    }
+}
+.barra div{
+    flex: 0 0 15%;
+}
+.siteHeader h1{
+    font-size: 4rem;
+}
+@media (min-width: 992px) {
+    .siteHeader h1{
+        font-size: 8rem;
+    }
+}
+.siteHeader p{
+    font-size: 2rem;
+    max-width: 33rem;
+    text-align: center;
+    line-height: 2;
+    margin-top: 7rem;
+}
+@media (min-width: 992px) {
+    .siteHeader p{
+        max-width: 43rem;
+    }
 }
 .fixed{
     position: fixed;
@@ -120,7 +205,16 @@ nav {
     left: 0;
     z-index: 1000;
     opacity: .9;
-    background-color: var(--grisOscuro);
+    background-color: var(--blanco);
+    transition: all .7s ease-in-out;
+}
+.fixed nav a{
+    background-color: var(--colorPrimario);
+    border: 1px solid var(--colorPrimario);
+    border-radius: 1rem;
+}
+.fixed nav a:hover{
+    background-color: #E33000;
 }
 .barra img{
     width: 15rem;
@@ -131,7 +225,12 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20%;
+    margin-top: 37rem;
+}
+@media (min-width: 768px) {
+    .contenidoHeader{
+        margin-top: 32rem;
+    }
 }
 
 /* Seccion Bienvenida */
@@ -146,11 +245,21 @@ nav {
 /* Seccion Áreas */
 .contenedorAreas{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .area{
-    flex: 0 0 25%;
+    flex: 0 0 calc(50% - .3rem);
     position: relative;
     display: inline-block;
+    margin-bottom: .5rem;
+}
+@media (min-width: 768px) {
+    .area{
+        flex: 0 0 25%;
+        position: relative;
+        display: inline-block;
+    }    
 }
 .area p{
     position: absolute;
@@ -169,9 +278,14 @@ nav {
     flex-wrap: wrap;
 }
 .clase{
-    flex: 0 0 calc(50% - 5rem);
+    flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .clase{
+        flex: 0 0 calc(50% - 5rem);
+    }    
 }
 .clase h3{
     position: absolute;
@@ -208,7 +322,8 @@ nav {
     filter: brightness(.6);
 }
 .resumenInfo{
-    display: flex;
+    display: none;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 17%
 }
@@ -217,10 +332,36 @@ nav {
 	font-size: 1.8rem;
 	text-align: center;
 	text-transform: uppercase;
-    flex: 0 0 25%;
+    flex: 0 0 50%;
     font-weight: bold;
     color: var(--blanco);
-;}
+}
+@media (min-width: 768px) {
+    .resumenInfo li{
+        flex: 0 0 25%;
+    }
+}
+#resumenClick{
+    display: block;
+    color: var(--blanco);
+    background-color: var(--colorPrimario);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+    border: 1px solid var(--negor);
+    border-radius: 1rem;
+    transition: backgroundcolor .5s ease-in-out;
+    position: absolute;
+    bottom: 4rem;
+    margin-left: 30%;
+}
+@media (min-width: 768px) {
+    #resumenClick{
+        margin-left: 43%;    
+    }
+}
 
 /* Seccion Instructores */
 .contenedorInstructores{
@@ -229,9 +370,17 @@ nav {
     flex-wrap: wrap;
 }
 .instructor{
-    flex: 0 0 calc(50% - 5rem);
+    flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .instructor{
+        flex: 0 0 calc(50% - 5rem);
+    }
+}
+.instructor img{
+    min-height: 100%;
 }
 .instructor h3{
     position: absolute;
@@ -252,9 +401,41 @@ nav {
     flex-wrap: wrap;
 }
 .post{
-    flex: 0 0 calc(50% - 5rem);
+    flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+    .post{
+        flex: 0 0 calc(50% - 5rem);
+    }
+
+}
+.button a{
+    display: block;
+    color: var(--blanco);
+    background-color: var(--colorPrimario);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    border: 1px solid var(--negor);
+    border-radius: 1rem;
+    transition: backgroundcolor .5s ease-in-out;
+}
+@media (min-width: 768px) {
+    .button{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .button a{
+        padding: 2rem 4rem;
+    }
+}
+.button a:hover{
+    background-color: #e33000;
+    cursor: pointer;
 }
 .post h3{
     position: absolute;
@@ -268,87 +449,92 @@ nav {
     bottom: 1rem;
     color: var(--blanco);
 }
-.button a{
-    background-color: var(--colorPrimario);
-    padding: 2rem 4rem;
-	text-align: center;
-    color: var(--blanco);
-    font-size: 2rem;
-    text-transform: uppercase;
-    float: right;
-    border: 1px solid var(--negor);
-    font-weight: bold;
-    border-radius: 1rem;
-    transition: backgroundcolor .5s ease-in-out;
-}
-.button a:hover{
-    background-color: #e33000;
-    cursor: pointer;
-}
-    
-/* Seccion Sorteo */
-.sorteo{
-    background-color: var(--blanco);
-}
-.sorteo h2{
-    color: var(--negro);
-    margin-bottom: 4rem;
-}
-.cuentaRegresiva{
-    display: flex;
-    justify-content: space-between;
-}
-.cuentaRegresiva li{
-    list-style: none;
-	font-size: 1.8rem;
-	text-align: center;
-	text-transform: uppercase;
-    flex: 0 0 25%;
-    font-weight: bold;
-}
-.numero{
-    color: var(--colorPrimario);
-	font-size: 10rem;
-	margin: 0 0 1rem 0;
-	font-family: 'Oswald', sans-serif;
-}
 
 /* Seccion Entrenamiento */
 .contenidoEntrenamiento{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .contenidoEntrenamiento p,
 .contenidoEntrenamiento video{
-    flex: 0 0 calc(50% - 5rem);
+    flex: 0 0 100%;
 }
 .contenidoEntrenamiento p{
     font-size: 2rem;
     line-height: 2;
-    padding-right: 6rem;
-    margin: auto;
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
 }
-.contenidoEntrenamiento video{
-    max-width: 60rem;
-    margin-left: 5rem;
+@media (min-width: 992px) {
+    .contenidoEntrenamiento p,
+    .contenidoEntrenamiento video{
+        flex: 0 0 calc(50% - 5rem);
+    }
+    .contenidoEntrenamiento p{
+        padding: 2rem;
+    }
+    .contenidoEntrenamiento video{
+        max-width: 50rem;
+        margin-left: 5rem;
+    } 
 }
 
 /* Seccion Galeria */
-.galeria ul li{
-    display: inline-block;
-    width: 24.5%;
+.galeria ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 20rem);
+    grid-gap: 2rem;
 }
-
-/* Sección canvas */
-.canvas{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-canvas{
+.galeria ul img{
     display: block;
-    margin: 2rem auto;
+    max-height: -webkit-fill-available;
+    min-height: -webkit-fill-available;
 }
+@media (min-width: 768px) {
+    .galeria ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 20rem);
+    }
+}
+@media (min-width: 992px) {
+    .galeria ul {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 20rem);
+    }
+}
+.galeria ul li:nth-child(2) {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+@media (min-width: 768px) {
+    .galeria ul li:nth-child(2) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 3;
+    }
+}
+@media (min-width: 992px) {
+    .galeria ul li:nth-child(2) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+    }
+}
+.galeria ul li:nth-child(6) {
+    grid-row: 4 / 6;
+}
+@media (min-width: 768px) {
+    .galeria ul li:nth-child(6) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 5;
+    }
+}
+@media (min-width: 992px) {
+    .galeria ul li:nth-child(6) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 4;
+    }
+} 
 
 /* Seccion Newsletter */
 .newsletter{
@@ -368,6 +554,41 @@ canvas{
     margin-bottom: 5rem;
 }
 
+/* Seccion Sorteo */
+.sorteo{
+    background-color: var(--blanco);
+}
+.sorteo h2{
+    color: var(--negro);
+    margin-bottom: 4rem;
+}
+.cuentaRegresiva{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+.cuentaRegresiva li{
+    list-style: none;
+	font-size: 1.8rem;
+	text-align: center;
+	text-transform: uppercase;
+    flex: 0 0 50%;
+    font-weight: bold;
+    padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .cuentaRegresiva li{
+        flex: 0 0 25%;
+    } 
+}
+.numero{
+    color: var(--colorPrimario);
+	font-size: 10rem;
+	margin: 0 0 1rem 0;
+	font-family: 'Oswald', sans-serif;
+}
+
 /* Seccion Footer */
 .siteFooter{
     display: flex;
@@ -378,19 +599,30 @@ canvas{
 }
 .siteMenu{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+@media (min-width: 768px) {
+    .siteMenu{
+        flex-direction: row-reverse;
+    }
 }
 .footerMenu{
     flex-basis: calc(50% - 2rem);
     display: flex;
+    margin-top: 3rem;
+}
+@media (min-width: 768px) {
+    .footerMenu{
+        margin-top: 0rem;
+    }
 }
 .footerMenu a{
     text-transform: uppercase;
     color: var(--blanco);
     font-weight: bold;
-    font-size: 2rem;
-    margin: auto 2rem;
+    margin: auto 1.5rem;
     transition: all .4s ease-in-out;
 }
 .footerMenu a:hover{
@@ -401,13 +633,20 @@ canvas{
     background-color: var(--colorPrimario);
     border-radius: .5rem;
 }
+@media (min-width: 768px) {
+    .footerMenu a{
+        margin: auto 2rem;
+    }
+}
 .redesSociales{
     flex-basis: calc(50% - 2rem);
     border: .3rem solid var(--colorPrimario);
     border-radius: 1rem;
     margin: 1rem;
+    padding: 1rem;
 }
 .redesSociales h3{
+    color: var(--blanco);
     text-align: center;
     text-transform: uppercase;
     padding-bottom: 1rem;
@@ -419,11 +658,17 @@ canvas{
     text-align: center;
 }
 .redesSociales a{
-    font-size: 2rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
     color: var(--blanco);
     text-transform: uppercase;
     text-align: center;
+}
+@media (min-width: 768px) {
+    .redesSociales a{
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
 }
 p.copyright{
     color: var(--blanco);
