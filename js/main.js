@@ -49,7 +49,6 @@ $(function(){
     //animacion de numeros en resumen
     $('#resumenClick').on('click', function(){
         $('.resumenInfo').css({'display': 'flex'});
-
         $('.resumenInfo li:nth-child(1) p').animateNumber({ number: 7 }, 1200);
         $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 19 }, 1200);
         $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 5 }, 1500);

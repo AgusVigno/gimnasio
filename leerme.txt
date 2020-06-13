@@ -6,6 +6,11 @@ Para esta entrega, se utilizó la programación "Mobile First", teniendo en cuen
 
 Se aplico CSS Grid en la sección de Galería.
 Se aplico Flexbox en el resto de las secciones.
+Se aplico en Galería ligthbox para mejor visualización de imagenes.
+Se aplico animación de números en sección de resumen.
+Se aplico contador regresivo simulando un sorteo.
+Se utilizo normalize para quitar los estilos por defecto agregados por los navegadores.
+Se incorporó Leaflet (gratuito) reemplazando a google maps, ya que la api es paga. 
 
 
 Falta aplicar cuando lo veamos en clase:

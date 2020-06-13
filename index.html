@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>laplataGYM</title>
 </head>
@@ -196,36 +199,77 @@
         </div>
         <ul>
             <li>
-                <img src="./assets/img/galeria6.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria6.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria6.jpg" alt="imagen galeria">
+                </a>
             </li>
             <li>
-                <img src="./assets/img/galeria18.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria18.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria18.jpg" alt="imagen galeria">
+                </a>
             </li>
             <li>
-                <img src="./assets/img/galeria3.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria3.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria3.jpg" alt="imagen galeria">
+                </a>            </li>
+            <li>
+                <a href="./assets/img/galeria19.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria19.jpg" alt="imagen galeria">
+                </a>
             </li>
             <li>
-                <img src="./assets/img/galeria19.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria16.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria16.jpg" alt="imagen galeria">
+                </a>
             </li>
             <li>
-                <img src="./assets/img/galeria16.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria17.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria17.jpg" alt="imagen galeria">
+                </a>
             </li>
             <li>
-                <img src="./assets/img/galeria17.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria11.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria11.jpg" alt="imagen galeria">
+                </a>            
             </li>
             <li>
-                <img src="./assets/img/galeria11.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria8.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria8.jpg" alt="imagen galeria">
+                </a>            
             </li>
             <li>
-                <img src="./assets/img/galeria8.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria12.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria12.jpg" alt="imagen galeria">
+                </a>            
             </li>
             <li>
-                <img src="./assets/img/galeria12.jpg" alt="imagen galeria">
-            </li>
-            <li>
-                <img src="./assets/img/galeria5.jpg" alt="imagen galeria">
+                <a href="./assets/img/galeria5.jpg" data-lightbox="galeria">
+                    <img src="./assets/img/galeria5.jpg" alt="imagen galeria">
+                </a>
             </li>
         </ul>
+    </section>
+
+    <section class="seccion">
+        <div class="contenedor">
+            <ul class="grid">
+                <li>
+                    <img src="./assets/img/galeria.jpg" alt="imagen galeria">
+                </li>
+                <li>
+                    <img src="./assets/img/galeria1.jpg" alt="imagen galeria">
+                </li>
+                <li>
+                    <img src="./assets/img/galeria23.jpg" alt="imagen galeria">
+                </li>
+                <li>
+                    <img src="./assets/img/galeria20.jpg" alt="imagen galeria">
+                </li>
+                <li>
+                    <img src="./assets/img/galeria13.jpeg" alt="imagen galeria">
+                </li>
+            </ul>    
+        </div>
     </section>
 
     <!-- newsletter -->
@@ -257,12 +301,12 @@
             <div class="redesSociales">
                 <h3>Redes <span>sociales</span></h3>
                 <nav>
-                    <a href="#">Facebook</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Youtube</a>
-                    <a href="#">Correo</a>
-                    <a href="#">Whatsapp</a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </nav>
             </div>
             <nav class="footerMenu">
@@ -280,6 +324,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
