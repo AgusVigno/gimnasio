@@ -26,6 +26,7 @@
 
 $(function(){
     var barraAltura = $('.barra').innerHeight();
+    var slideIndex = 0;
     
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
@@ -33,10 +34,8 @@ $(function(){
         //menu flotante en la parte superior
         if(scroll > barraAltura){
             $('.barra').addClass('fixed');
-            $('.siteHeader').css({ 'padding-top': '9.9rem'});
         }else{
             $('.barra').removeClass('fixed');
-            $('.siteHeader').css({ 'padding-top':'0px'});
         }
 
     });
@@ -53,5 +52,24 @@ $(function(){
         $('.resumenInfo li:nth-child(2) p').animateNumber({ number: 19 }, 1200);
         $('.resumenInfo li:nth-child(3) p').animateNumber({ number: 5 }, 1500);
         $('.resumenInfo li:nth-child(4) p').animateNumber({ number: 23 }, 1500); 
+        $('#resumenClick').css({display:'none'});
+        $('.resumenBoton').remove();
     });
+
+    //slider en el home
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if(slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides,3000);
+    }
 });

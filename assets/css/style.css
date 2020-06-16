@@ -149,16 +149,10 @@ video {
 	height: 8px;
 	display: block;
 }
-
-.siteHeader{
-    background-image: url(../img/gym-hero.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 100vh;
-    min-height: 60rem;
-    color: var(--blanco);
-}
 .barra{
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     width:100%;
     flex-wrap: wrap;
@@ -228,15 +222,62 @@ video {
     flex: 0 0 50%;
 }
 .contenidoHeader{
+    height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 37rem;
+    color: var(--blanco);
 }
-@media (min-width: 768px) {
-    .contenidoHeader{
-        margin-top: 32rem;
-    }
+.contenidoHeader h1{
+    text-align: center;
+} 
+.contenidoHeader p{
+    margin: 0 auto;
+}
+
+/* Slider */
+#slider1{
+    background-image: url(../img/slider1.jpg);
+}
+#slider2{
+    background-image: url(../img/slider2.jpg);
+}
+#slider3{
+    background-image: url(../img/slider3.jpg);
+}
+#slider4{
+    background-image: url(../img/slider4.jpg);
+}
+.mySlides{
+    display:none;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 60rem;
+    max-height: 100vh;
+}
+.text{
+    color:#f2f2f2;
+    font-size:15px;
+    padding:8px 12px;
+    position:absolute;
+    bottom:8px;
+    width:100%;
+    text-align:center;
+}
+.fade{
+    -webkit-animation-name:fade;
+    -webkit-animation-duration:1.5s;
+    animation-name:fade;
+    animation-duration:1.5s;
+}
+@-webkit-keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+}
+@keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
 }
 
 /* Seccion Bienvenida */
@@ -249,32 +290,70 @@ video {
 }
 
 /* Seccion Áreas */
-.contenedorAreas{
+.contenedorAreas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
-.area{
-    flex: 0 0 calc(50% - .3rem);
+.contenedorAreas .area {
+    flex: 0 0 100%;
+    height: 25rem;
     position: relative;
-    display: inline-block;
-    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 @media (min-width: 768px) {
-    .area{
-        flex: 0 0 25%;
-        position: relative;
-        display: inline-block;
-    }    
+    .contenedorAreas .area {
+        flex: 0 0 50%;
+    } 
 }
-.area p{
+
+@media (min-width: 1200px) {
+    .contenedorAreas .area {
+        flex: 0 0 25%;
+        height: 30rem;
+    }
+}
+.contenedorAreas .area img {
+    height: 25rem;
+    object-fit: cover;
+}
+@media (min-width: 768px) {
+    .contenedorAreas .area img {
+        height: 30rem;
+        filter: gray;
+        -webkit-filter: grayscale(.8);
+        transition: all .5s ease-in-out;
+    }
+    .contenedorAreas .area:hover img {
+        filter: gray;
+        -webkit-filter: grayscale(0);
+    }
+}
+.contenedorAreas .area::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    left: 2rem;
-    bottom: 0;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: bold;
+    top: 0;
+}
+.area p {
+    position: absolute;
+    margin: auto;
     color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 900;
+    z-index: 100;
+}
+@media (min-width: 768px) {
+    .area p {
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+    .area:hover p {
+        opacity: 1;
+    }
 }
 
 /* Seccion Clases */
@@ -348,6 +427,15 @@ video {
         flex: 0 0 25%;
     }
 }
+.resumenBoton{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 60rem;
+    padding-bottom: 5rem;    
+}
 #resumenClick{
     display: block;
     color: var(--blanco);
@@ -360,14 +448,6 @@ video {
     border: 1px solid var(--negor);
     border-radius: 1rem;
     transition: backgroundcolor .5s ease-in-out;
-    position: absolute;
-    bottom: 4rem;
-    margin-left: 30%;
-}
-@media (min-width: 768px) {
-    #resumenClick{
-        margin-left: 43%;    
-    }
 }
 
 /* Seccion Instructores */

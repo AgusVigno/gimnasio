@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <title>laplataGYM</title>
@@ -14,6 +15,38 @@
 <body>
     <!-- site-header -->
     <header class="siteHeader">
+        <div class="mySlides animate__animated animate__slideInDown animate__faster" id="slider1">
+            <div class="contenidoHeader">
+                <div>
+                    <h1>Logra tus metas</h1>
+                    <p>La fuerza no viene de una capacidad física. Viene de una voluntad indomable<em> - Mahatma Gandhi</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides animate__animated animate__slideInLeft animate__faster" id="slider2">
+            <div class="contenidoHeader">
+                <div>
+                    <h1>Hazlo</h1>
+                    <p>Si puedes soñarlo, puede hacerlo</p>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides animate__animated animate__slideInDown animate__faster" id="slider3">
+            <div class="contenidoHeader">
+                <div>
+                    <h1>Logra tus metas</h1>
+                    <p>La fuerza no viene de una capacidad física. Viene de una voluntad indomable<em> - Mahatma Gandhi</em></p>
+                </div>
+            </div>
+        </div>
+        <div class="mySlides animate__animated animate__slideInRight animate__faster" id="slider4">
+            <div class="contenidoHeader">
+                <div>
+                    <h1>Hazlo</h1>
+                    <p>Si puedes soñarlo, puede hacerlo</p>
+                </div>
+            </div>
+        </div>
         <div class="barra">
             <a href="./index.html">
                 <img src="./assets/img/logo.png" alt="logo">
@@ -31,12 +64,7 @@
                 <a href="views/contacto.html">Contacto</a>
             </nav>  
         </div>
-        <div class="contenidoHeader">
-            <h1>Logra tus metas</h1>
-            <p>La fuerza no viene de una capacidad física. Viene de una voluntad indomable<em> - Mahatma Gandhi</em></p>
-        </div>
     </header> 
-    
 
     <!-- seccion de bienvenida -->
     <section class="contenedor bienvenida seccion">
@@ -110,7 +138,9 @@
                 <li><p class="numero"></p>posts</li>
             </ul>
         </div>
-        <button id="resumenClick" type="button">Haceme Click!!</button>
+        <div class="resumenBoton">
+            <button id="resumenClick" type="button">Haceme Click!!</button>
+        </div>
     </div>
 
     <section class="contenedor seccion instructores">
