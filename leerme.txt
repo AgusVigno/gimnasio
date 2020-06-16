@@ -4,6 +4,7 @@ Para esta entrega, se utilizó la programación "Mobile First", teniendo en cuen
     3. Notebook/Escritorio          992px
 
 
+Se utiliazaron fuentes de Google Fonts.
 Se aplico CSS Grid en la sección de Galería.
 Se aplico Flexbox en el resto de las secciones.
 Se aplico en Galería ligthbox para mejor visualización de imagenes.
@@ -14,7 +15,6 @@ Se incorporó Leaflet (gratuito) reemplazando a google maps, ya que la api es pa
 
 
 Falta aplicar cuando lo veamos en clase:
-- Animaciones, Transiciones y Transformaciones en CSS
 - Frameworks CSS + Bootstrap
 - Bootstrap + Themes
 - SASS
@@ -24,16 +24,7 @@ Falta aplicar cuando lo veamos en clase:
 
 La idea es incorporarle cualquier otra idea que proponga el profe o tutora!
 
-Devolucion:
-- Después el footer, tal vez le agregaría tu logo y la ubicación física del gym y achicaría un poco los formatos de ahí. 
-- Cambiar fonts por sans serif.
-- Slider en el inicio en vez del header fijo.
 
 HACER:
-- Usar animaciones de CSS3.
-- Usar transformaciones en las imagenes.
-- Usar transiciones.
 - Aplicar cards para precios (delu).
-- Ver BEM (Block Element Modif).
-- Ver 7 en 1. (delu)
-- Fixed en la transicion del menu fijo.
+- Logo y ubicacion en el footer.

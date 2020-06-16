@@ -36,12 +36,12 @@ h1 {
 }
 h2 {
     color: var(--colorPrimario);
-    font-size: 3.4rem;
+    font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
 }
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /** Globales **/
@@ -58,13 +58,13 @@ video {
     max-width: 100%;
 }
 .seccion{
-    padding: 2.5rem 0;
+    padding: 1rem 0;
 }
 .encabezado{
     margin: 2rem 0 4rem 0;
 }
 .contenedor{
-    max-width: 120rem;
+    max-width: 80rem;
     width: 95%;
     margin: 0 auto;   
 }
@@ -93,7 +93,7 @@ video {
 		width: 67%;
 		float: right;
 		text-align: right;
-	}	
+    }
 }
 .navegacionPrincipal a{
     display: block;
@@ -119,6 +119,8 @@ video {
 @media (min-width: 992px) {
     .navegacionPrincipal a{
         font-size: 2rem;
+        padding: 1rem 2rem;
+        margin-right: 1rem;
     }    
 }
 .navegacionPrincipal a:hover{
@@ -144,10 +146,18 @@ video {
 	cursor: pointer;
 }
 .menuMovil span{
-	background-color: #ffffff;
-	margin-top: 6px;
-	height: 8px;
-	display: block;
+    background-color: var(--negro);
+    margin-top: .4rem;
+    width: 5rem;
+    height: .5rem;
+    display: block;
+}
+@media (min-width: 768px) {
+    .menuMovil span{
+        background-color: var(--blanco);
+        margin-top: .6rem;
+        height: .8rem;
+    }
 }
 .barra{
     position: absolute;
@@ -212,14 +222,37 @@ video {
     background-color: var(--colorPrimario);
     border: 1px solid var(--colorPrimario);
     border-radius: 1rem;
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    width: 15rem;
+    padding: .4rem;
 }
 .fixed nav a:hover{
     background-color: #E33000;
 }
+@media (min-width: 768px) {
+    .fixed nav a{
+        width: 8rem;
+        padding: 1rem 0;
+        margin-right: 1rem;
+    }    
+}
+@media (min-width: 992px) {
+    .fixed nav a{
+        width: 15rem;
+        padding: 1.5rem 1rem;
+        margin-right: 1.5rem;
+    }    
+}
 .barra img{
-    width: 15rem;
+    width: 8rem;
     margin: 1rem 3rem;
     flex: 0 0 50%;
+}
+@media (min-width: 768px) {
+    .barra img{
+        width: 15rem;
+    }
 }
 .contenidoHeader{
     height: 100vh;
@@ -282,11 +315,28 @@ video {
 
 /* Seccion Bienvenida */
 .bienvenida{
-    padding-top: 3.5rem;
+    padding-top: 2rem;
+}
+.bienvenida h2{
+    margin-top: 0;
+    font-size: 2rem;
 }
 .bienvenida p{
-    margin-top: 3rem;
-    font-size: 1.8rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+}
+@media (min-width: 480px) {
+    .bienvenida{
+        padding-top: 3.5rem;
+    }
+    .bienvenida p{
+        margin-top: 3rem;
+        font-size: 1.8rem;
+    }
+    .bienvenida h2{
+        font-size: 3rem;
+    }
 }
 
 /* Seccion Áreas */
@@ -357,6 +407,21 @@ video {
 }
 
 /* Seccion Clases */
+.clases .encabezado h2{
+    margin-top: 0;
+    font-size: 2rem;
+}
+.clases .encabezado p{
+    font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+    .clases .encabezado h2{
+        font-size: 3rem;
+    }
+    .clases .encabezado p{
+        font-size: 1.8rem;
+    }    
+}
 .contenedorClases{
     display: flex;
     justify-content: space-between;
@@ -366,6 +431,11 @@ video {
     flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+    overflow: hidden;
+}
+.clase:hover img{
+    transition: all .5s ease-in-out;
+    transform: scale(1.5);
 }
 @media (min-width: 768px) {
     .clase{
@@ -377,12 +447,15 @@ video {
     left: 1rem;
     bottom: 4rem;
     color: var(--blanco);
+    font-size: 2rem;
+    text-transform: uppercase;
 }
 .clase p{
     position: absolute;
     bottom: 1rem;
     left: 1rem;
     color: var(--blanco);
+    font-size: 1.6rem;
 }
 .verClases{
     display: flex;
@@ -395,11 +468,14 @@ video {
     text-transform: uppercase;
     margin-top: 2rem;
 }
+.clases .button a{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
 
 /* Seccion info resumen del gym */
 .resumen{
-    height: 60rem;
-    margin-top: 10rem;
+    height: 40rem;
     background-image: url(../img/galeria15.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -411,7 +487,8 @@ video {
     display: none;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 17%
+    height: 40rem;
+    align-items: center;
 }
 .resumenInfo li{
     list-style: none;
@@ -421,6 +498,7 @@ video {
     flex: 0 0 50%;
     font-weight: bold;
     color: var(--blanco);
+    margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
     .resumenInfo li{
@@ -433,24 +511,44 @@ video {
     align-items: flex-end;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 60rem;
+    height: 40rem;
     padding-bottom: 5rem;    
 }
 #resumenClick{
     display: block;
     color: var(--blanco);
     background-color: var(--colorPrimario);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
     border: 1px solid var(--negor);
     border-radius: 1rem;
     transition: backgroundcolor .5s ease-in-out;
 }
+@media (min-width: 768px) {
+    #resumenClick{
+        font-size: 2rem;
+        padding: 2rem 4rem;
+    }    
+}
 
 /* Seccion Instructores */
+.instructores .encabezado h2{
+    font-size: 2rem;
+}
+.instructores .encabezado p{
+    font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+    .instructores .encabezado h2{
+        font-size: 3rem;
+    }
+    .instructores .encabezado p{
+        font-size: 1.8rem;
+    }    
+}
 .contenedorInstructores{
     display: flex;
     justify-content: space-between;
@@ -460,6 +558,7 @@ video {
     flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 @media (min-width: 768px) {
     .instructor{
@@ -468,41 +567,77 @@ video {
 }
 .instructor img{
     min-height: 100%;
+    filter: grayscale(.8);
+}
+.instructor:hover img{
+    filter: grayscale(0);
+    animation: pulse; 
+    animation-duration: 1s;
 }
 .instructor h3{
     position: absolute;
     left: 1rem;
     bottom: 1rem;
     color: var(--blanco);
+    font-size: 2rem;
 }
 
 /* Seccion Mapa */
 .mapa{
-    height: 50rem;
+    height: 30rem;
+}
+@media (min-width: 768px) {
+    .mapa{
+        height: 40rem;
+    }
 }
 
 /* Seccion Blog */
+.blog .encabezado h2{
+    font-size: 2rem;
+}
+.blog .encabezado p{
+    font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+    .blog .encabezado h2{
+        font-size: 3.4rem;
+    }
+    .blog .encabezado p{
+        font-size: 1.8rem;
+    }    
+}
 .contenedorBlog{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 .post{
+    border: 4px solid #8c8585;
     flex: 0 0 100%;
     position: relative;
     margin-bottom: 2rem;
+    overflow: hidden; 
 }
 @media (min-width: 768px) {
     .post{
         flex: 0 0 calc(50% - 5rem);
     }
-
+}
+.post img{
+    transition: all .4s ease;
+    width:100%;
+    height: 100%;
+}
+.post img:hover{
+    transform:scale(1.5) rotate(20deg); 
+    opacity:0.6;
 }
 .button a{
     display: block;
     color: var(--blanco);
     background-color: var(--colorPrimario);
-    font-size: 2rem;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -527,17 +662,35 @@ video {
 .post h3{
     position: absolute;
     left: 1rem;
-    bottom: 3rem;
+    bottom: 1rem;
     color: var(--blanco);
+    font-size: 1.8rem;
+    padding-bottom: 1.5rem;
 }
 .post p{
     position: absolute;
     left: 1rem;
     bottom: 1rem;
     color: var(--blanco);
+    font-size: 1.6rem;
+    margin: 0;
 }
 
 /* Seccion Entrenamiento */
+.entrenamiento .encabezado h2{
+    font-size: 2rem;
+}
+.entrenamiento .encabezado p{
+    font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+    .entrenamiento .encabezado h2{
+        font-size: 3.4rem;
+    }
+    .entrenamiento .encabezado p{
+        font-size: 1.8rem;
+    }    
+}
 .contenidoEntrenamiento{
     display: flex;
     flex-wrap: wrap;
@@ -548,10 +701,11 @@ video {
     flex: 0 0 100%;
 }
 .contenidoEntrenamiento p{
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2;
     padding: 0 2rem 2rem 2rem;
     text-align: center;
+    margin-top: 0;
 }
 @media (min-width: 992px) {
     .contenidoEntrenamiento p,
@@ -560,18 +714,33 @@ video {
     }
     .contenidoEntrenamiento p{
         padding: 2rem;
+        font-size: 1.8rem;
     }
     .contenidoEntrenamiento video{
-        max-width: 50rem;
+        max-width: 40rem;
         margin-left: 5rem;
     } 
 }
 
 /* Seccion Galeria */
+.galeria .encabezado h2{
+    font-size: 2rem;
+}
+.galeria .encabezado p{
+    font-size: 1.4rem;
+}
+@media (min-width: 768px) {
+    .galeria .encabezado h2{
+        font-size: 3.4rem;
+    }
+    .galeria .encabezado p{
+        font-size: 1.8rem;
+    }    
+}
 .galeria ul{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(6, 20rem);
+    grid-template-rows: repeat(6, 12rem);
     grid-gap: 2rem;
 }
 .galeria ul img{
@@ -626,7 +795,7 @@ video {
 /* Imagenes Superpuestas */
 .grid{
     display: grid;
-    grid-template-columns: repeat(10, 4.5rem);
+    grid-template-columns: repeat(8, 4.5rem);
     grid-template-rows: repeat(6, 4.5rem);
     background-image: url(../img/fondo.jpg);
     background-position: center center;
@@ -635,117 +804,71 @@ video {
 }
 @media (min-width: 768px) {
     .grid{
-        grid-template-columns: repeat(9, 10rem);
-        grid-template-rows: repeat(5, 10rem);
+        grid-template-columns: repeat(10, 7.29rem);
+        grid-template-rows: repeat(6, 10rem);
     }    
 }
 @media (min-width: 992px) {
     .grid{
-        grid-template-columns: repeat(12, 10rem);
+        grid-template-columns: repeat(8, 10rem);
         grid-template-rows: repeat(6, 10rem);
     }    
 }
 .grid li:nth-child(1) {
-    grid-column: 7 / 11;
+    grid-column: 5 / 9;
     grid-row: 1 / 7;
     z-index: 5;
     opacity: .5;
     transform: grayscale(.8);
-    height: 31rem;
+    display: flex;
 }
 @media (min-width: 768px) {
     .grid li:nth-child(1) {
-        grid-column: 7 / 10;
+        grid-column: 6 / 11;
         grid-row: 1 / 7;
-        height: 50rem;
     }
 }
 @media (min-width: 992px) {
     .grid li:nth-child(1) {
-        grid-column: 9 / 13;
+        grid-column: 5 / 9;
         grid-row: 1 / 7;
     }
 }
 .grid li:nth-child(2) {
-    grid-column: 4 / 8;
-    grid-row: 4 / 8;
+    grid-column: 1 / 5;
+    grid-row: 4 / 7;
     z-index: 10;
     opacity: .5;
-    height: 13rem;
     display: flex;
-    align-items: flex-end;
 }
 @media (min-width: 768px) {
     .grid li:nth-child(2) {
-        grid-column: 4 / 8;
-        grid-row: 4 / 8;
-        height: 20rem;
+        grid-column: 1 / 6;
+        grid-row: 4 / 7;
     }
 }
 @media (min-width: 992px) {
     .grid li:nth-child(2) {
-        grid-column: 5 / 9;
+        grid-column: 1 / 5;
         grid-row: 4 / 7;
-        height: 30rem;
     }
-}
+} 
 .grid li:nth-child(3) {
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     grid-row: 1 / 4;
     z-index: 7;
     opacity: .4;
 }
 @media (min-width: 768px) {
     .grid li:nth-child(3) {
-        grid-column: 1 / 4;
+        grid-column: 1 / 6;
         grid-row: 1 / 4;
-        height: 44rem;
     }
 }
 @media (min-width: 992px) {
     .grid li:nth-child(3) {
         grid-column: 1 / 5;
-        grid-row: 1 / 5;
-    }
-}
-.grid li:nth-child(4) {
-    grid-column: 3 / 7;
-    grid-row: 1 / 4;
-    z-index: 2;
-    opacity: .4;
-}
-@media (min-width: 768px) {
-    .grid li:nth-child(4) {
-        grid-column: 3 / 7;
         grid-row: 1 / 4;
-        display: flex;
-        align-items: flex-start;
-    }
-}
-@media (min-width: 992px) {
-    .grid li:nth-child(4) {
-        grid-column: 5 / 9;
-        grid-row: 1 / 4;
-        height: 33rem;
-    }
-}
-.grid li:nth-child(5) {
-    grid-column: 1 / 4;
-    grid-row: 4 / 7;
-    z-index: 1;
-    opacity: .5;
-    align-self: flex-end;
-}
-@media (min-width: 768px) {
-    .grid li:nth-child(5) {
-        grid-column: 1 / 4;
-        grid-row: 4 / 6;
-    }
-}
-@media (min-width: 992px) {
-    .grid li:nth-child(5) {
-        grid-column: 1 / 5;
-        grid-row: 3 / 7;
     }
 }
 
@@ -761,10 +884,20 @@ video {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 5rem 0;
 }
 .newsletter h3{
-    font-size: 5rem;
+    font-size: 3rem;
     margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    .newsletter h3{
+        font-size: 5rem;
+    }
+}
+.newsletter .button a{
+    padding: 1rem;
+    font-size: 1.4rem;
 }
 
 /* Seccion Sorteo */
@@ -797,9 +930,14 @@ video {
 }
 .numero{
     color: var(--colorPrimario);
-	font-size: 10rem;
+	font-size: 5rem;
 	margin: 0 0 1rem 0;
 	font-family: 'Oswald', sans-serif;
+}
+@media (min-width: 768px) {
+    .numero{
+        font-size: 10rem;
+    }
 }
 
 /* Seccion Footer */
@@ -824,7 +962,8 @@ video {
 .footerMenu{
     flex-basis: calc(50% - 2rem);
     display: flex;
-    margin-top: 3rem;
+    justify-content: space-between;
+    margin-top: 2rem;
 }
 @media (min-width: 768px) {
     .footerMenu{
@@ -842,21 +981,14 @@ video {
 .footerMenu a:hover{
     border: 1px solid var(--colorPrimario);
     color: var(--blanco);
-    font-size: 2rem;
-    padding: 1rem .5rem;
+    padding: .5rem;
     background-color: var(--colorPrimario);
     border-radius: .5rem;
 }
-@media (min-width: 768px) {
-    .footerMenu a{
-        font-size: 1.6rem;
-        margin: auto 2rem;
-    }
-}
 @media (min-width: 992px) {
     .footerMenu a{
-        font-size: 2rem;
-        margin: auto 2rem;
+        font-size: 1.5rem;
+        margin-left: 2rem;
     }
 }
 .redesSociales{
@@ -864,7 +996,7 @@ video {
     border-top: .3rem solid var(--colorPrimario);
     border-bottom: .3rem solid var(--colorPrimario);
     margin: 1rem;
-    padding: 2rem 0 3rem 0;
+    padding: 1rem;
 }
 @media (min-width: 768px) {
     .redesSociales{
@@ -872,13 +1004,9 @@ video {
         border-left: .3rem solid var(--colorPrimario);       
     }
 }
-@media (min-width: 992px) {
-    .redesSociales{
-        border: none;
-        border-left: .3rem solid var(--colorPrimario);       
-    }
-}
 .redesSociales h3{
+    font-size: 2rem;
+    margin-top: 0;
     color: var(--blanco);
     text-align: center;
     text-transform: uppercase;
@@ -886,12 +1014,12 @@ video {
 }
 @media (min-width: 768px) {
     .redesSociales h3{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 }
 @media (min-width: 992px) {
     .redesSociales h3{
-        font-size: 4.5rem;
+        font-size: 2.4rem;
     }
 }
 .redesSociales span{
@@ -899,25 +1027,34 @@ video {
 }
 .redesSociales nav{
     text-align: center;
+    margin-top: 1rem auto;
 }
 .redesSociales i{
-    font-size: 3.5rem;
+    font-size: 2rem;
     margin-right: 2rem;
     color: var(--blanco);
 }
 @media (min-width: 768px) {
     .redesSociales i{
-        font-size: 3rem;
-        margin-right: 2.5rem;
+        font-size: 2rem;
+        margin-right: 2rem;
     }
 }
 @media (min-width: 992px) {
     .redesSociales i{
-        font-size: 4.5rem;
+        font-size: 2.4rem;
         margin-right: 4rem;
     }
 }
+.redesSociales i:hover{
+    color: var(--colorPrimario);
+    animation-name: bounce;
+    animation-duration: 1s;
+
+}
 p.copyright{
+    margin-top: 0;
+    font-size: 1.2rem;
     color: var(--blanco);
 	padding: 1rem 0;
 	text-align: center;
