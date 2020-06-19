@@ -579,11 +579,25 @@ video {
 /* Seccion Mapa */
 .mapa{
     height: 30rem;
+    position: relative;
 }
 @media (min-width: 768px) {
     .mapa{
         height: 40rem;
     }
+}
+.mapa p{
+    background-color: var(--negro);
+    color:var(--blanco);
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    z-index: 100000;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: .8;
 }
 
 /* Seccion Blog */
@@ -751,7 +765,7 @@ video {
 @media (min-width: 992px) {
     .galeria ul {
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 20rem);
+        grid-template-rows: repeat(3, 15rem);
     }
 }
 .galeria ul li:nth-child(2) {
@@ -1100,7 +1114,7 @@ p.copyright{
     background-image: linear-gradient(to right bottom, #55c57a, #28b485);
 }
 .card__side--back-3 {
-    background-image: linear-gradient(to right bottom, #0b49f3, #3c6ef6);
+    background-image: linear-gradient(to right bottom, #3c6ef6, #0b49f3);
 } 
 .card:hover .card__side--front {
     transform: rotateY(-180deg);
@@ -1121,14 +1135,14 @@ p.copyright{
     background-image: linear-gradient(to right bottom, #55c57a, #28b485), url("../img/nat-6.jpg");
 }  
 .card__picture--3 {
-    background-image: linear-gradient(to right bottom, #0b49f3, #3c6ef6), url("../img/nat-7.jpg");
+    background-image: linear-gradient(to right bottom, #3c6ef6, #0b49f3), url("../img/nat-7.jpg");
 }
 .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
     text-transform: uppercase;
     text-align: right;
-    color: #fff;
+    color: var(--blanco);
     position: absolute;
     top: 9rem;
     right: 2rem;
@@ -1145,7 +1159,7 @@ p.copyright{
     background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.85), rgba(40, 180, 133, 0.85));
 }
 .card__heading-span--3 {
-    background-image: linear-gradient(to right bottom, #0b49f3, #3c6ef6);
+    background-image: linear-gradient(to right bottom, #3c6ef6, #0b49f3);
 }
 .card__details {
     padding: 3rem;
@@ -1173,7 +1187,7 @@ p.copyright{
 }
 .card__price-box {
     text-align: center;
-    color: #fff;
+    color: var(--blanco);
     margin-bottom: 8rem;
 }
 .card__price-only {
@@ -1225,11 +1239,11 @@ p.copyright{
     border-radius: 10rem;
 }
 .btn--white {
-    background-color: #fff;
+    background-color: var(--blanco);
     color: #777;
 }
 .btn--white::after {
-    background-color: #fff;
+    background-color: var(--blanco);
 }
 
 

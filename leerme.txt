@@ -3,28 +3,27 @@ Para esta entrega, se utilizó la programación "Mobile First", teniendo en cuen
     2. Tablet                       768px
     3. Notebook/Escritorio          992px
 
+Se mejoro el responsive, teniendo en cuenta modo desarrollo en Chrome, los siguientes dispositivos:
+    Iphone 6/7/8            375 x 667
+    Ipad                    768 x 1024
+    Laptop with touch       1280 x 950
+
 
 Se utiliazaron fuentes de Google Fonts.
 Se aplico CSS Grid en la sección de Galería.
 Se aplico Flexbox en el resto de las secciones.
-Se aplico en Galería ligthbox para mejor visualización de imagenes.
+Se aplico en Galería ligthbox para mejor visualización de imagenes al hacer click en cualquiera.
 Se aplico animación de números en sección de resumen.
 Se aplico contador regresivo simulando un sorteo.
 Se utilizo normalize para quitar los estilos por defecto agregados por los navegadores.
 Se incorporó Leaflet (gratuito) reemplazando a google maps, ya que la api es paga. 
-
-
-Falta aplicar cuando lo veamos en clase:
-- Frameworks CSS + Bootstrap
-- Bootstrap + Themes
-- SASS
-- Servidor, Seguridad y SEO
-- Completar el resto de las secciones html.
-
-
-La idea es incorporarle cualquier otra idea que proponga el profe o tutora!
+Se aplico a modo práctica, transiciones y transformaciones en varios lugares, pero mas adelante se sacarán algunos. 
 
 
 HACER:
-- Aplicar cards para precios (delu).
 - Logo y ubicacion en el footer.
+- mejorar tiempo carga sitio.
+- problema version movil cards.
+- libreria JS para saber cuando hace scroll el user. WOW.js
+- Aplicar al formulario el FOCUS full width.
+- Slider mejorarlo.
