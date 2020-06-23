@@ -3,28 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/lightbox.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <title>LaPlataGym</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>laplataGYM</title>
 </head>
 <body>
+    <!-- site-header -->
+    <header class="siteHeader header__blog">
+        <div class="barra">
+            <a href="../index.html">
+                <img src="../assets/img/logo.png" alt="logo">
+            </a>
+            <div class="menuMovil">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+            <nav class="navegacionPrincipal">
+                <a href="../index.html">Inicio</a>
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./clases.html">Clases</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contacto.html">Contacto</a>
+            </nav>  
+        </div>
+    </header> 
 
-    <!-- header del sitio -->
-    <header class="header">
-        <a href="../index.html">
-            <img src="../assets/img/logo.jpeg" alt="logo">
-        </a>
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="./nosotros.html">Nosotros</a>
-            <a href="./clases.html">Clases</a>
-            <a href="./blog.html">Blog</a>
-            <a href="./contacto.html">Contacto</a>
-        </nav> 
-    </header>
-    <!-- fin del header -->
+
+    <!-- seccion de las clases, contenido principal del sitio -->
+    <main class="contenedor seccion clases">
+        <div class="encabezado">
+            <h2>Nuestro Blog</h2>
+            <p class="subtitulo"> Aprende tips de nuestros instructores expertos, con los mejores consejos teniendo en cuenta sus experiencias</p>
+        </div>
+        <ul class="row">
+            <li class="post col-xs-12 col-md-6 col-lg-6">
+                <img src="../assets/img/blog1.jpg" alt="imagen blog">
+                <h3>¿Cuál es la mejor hora para hacer ejercicio en casa?</h3>
+                <p>Autor: <span>Jhon Jacket</span></p>
+            </li>
+            <li class="post col-xs-12 col-md-6 col-lg-6">
+                <img src="../assets/img/blog2.jpeg" alt="imagen blog">
+                <h3>Ejercicios con gomas elásticas</h3>
+                <p>Autor: <span>Vicky Princeston</span></p>
+            </li>
+            <li class="post col-xs-12 col-md-6 col-lg-6">
+                <img src="../assets/img/blog3.jpg" alt="imagen blog">
+                <h3>5 ejercicios para conseguir abdominales perfectos</h3>
+                <p>Autor: <span>Fran Torontino</span></p>
+            </li>
+            <li class="post col-xs-12 col-md-6 col-lg-6">
+                <img src="../assets/img/blog4.jpg" alt="imagen blog">
+                <h3>Rutinas full body: entrenamientos completos</h3>
+                <p>Autor: <span>Jhon Jacket</span></p>
+            </li>
+        </ul>
+
+        <!-- paginado -->
+        <nav aria-label="Page navigation example">
+            <ul class="pagination  justify-content-center">
+                <li class="page-item"><a class="page-link pagina--activa" href="./blog.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Siguiente</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </main>
     
-    <h2>Hola desde Blog</h2>
+   
+	<!-- site-footer -->
+	<footer class="footer">
+        <div class="container">
+            <div class="footer__lg">
+                <div class="container footer__redes">
+                    <h3 class="col-12 align-self-center">Redes <span>sociales</span></h3>
+                    <nav class="col-12 align-self-center">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </nav>
+                </div>
+                <nav class="footer__menu">
+                    <a href="../index.html">Inicio</a>
+                    <a href="./nosotros.html">Nosotros</a>
+                    <a href="./clases.html">Clases</a>
+                    <a href="./blog.html">Blog</a>
+                    <a href="./contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <div class="footer__contacto">
+                <p><span>Dirección: </span>calle 12 esq. 41 de La Plata, Buenos Aires.</p>
+                <a href="../index.html" class="footer__logo">
+                    <img src="../assets/img/logo.png" alt="logo">
+                </a>
+                <p><span>Teléfono: </span>221 555 1234</p>
+            </div>
+        </div>
+        <div class="align-self-center">
+            <p class="copyright">Copyright &copy; 2020 laplataGYM. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="../js/jquery.animateNumber.min.js"></script>
+    <script src="../js/jquery.countdown.min.js"></script>
+    <script src="../js/lightbox.js"></script>
+    <script src="../js/main.js"></script>
 </body>
 </html>
