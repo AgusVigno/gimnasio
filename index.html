@@ -14,9 +14,16 @@
     <title>laplataGYM</title>
 </head>
 <body>
+    <!-- loader -->
+    <div class="loading show">
+        <div class="spin">
+        </div>
+        <p>cargando..</p>
+    </div>
+
     <!-- site-header -->
     <header class="siteHeader">
-        <div class="mySlides animate__animated animate__slideInDown animate__faster" id="slider1">
+        <div class="mySlides animate__animated animate__fadeIn animate__faster" id="slider1">
             <div class="contenidoHeader">
                 <div>
                     <h1>No mires el reloj</h1>
@@ -24,7 +31,7 @@
                 </div>
             </div>
         </div>
-        <div class="mySlides animate__animated animate__slideInLeft animate__faster" id="slider2">
+        <div class="mySlides animate__animated animate__fadeIn animate__faster" id="slider2">
             <div class="contenidoHeader">
                 <div>
                     <h1>La mentalidad es el límite</h1>
@@ -32,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <div class="mySlides animate__animated animate__slideInDown animate__faster" id="slider3">
+        <div class="mySlides animate__animated animate__fadeIn animate__faster" id="slider3">
             <div class="contenidoHeader">
                 <div>
                     <h1>Logra tus metas</h1>
@@ -40,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="mySlides animate__animated animate__slideInRight animate__faster" id="slider4">
+        <div class="mySlides animate__animated animate__fadeIn animate__faster" id="slider4">
             <div class="contenidoHeader">
                 <div>
                     <h1>Hazlo</h1>
@@ -102,28 +109,53 @@
             <h2>Nuestras Clases</h2>
             <p class="subtitulo">Algunas de nuestras clases, tenemos gran variedad, para principiantes y expertos, jovenes y adultos.</p>
         </div>
-        <ul class="row">
-            <li class="clase col-xs-12 col-md-6 col-lg-6">
-                <img src="./assets/img/clase-pesas.jpg" alt="clase levantamiento pesas">
-                <h3>Levantamiento de pesas</h3>
-                <p>Todos los días - 15:00 a 17:00 horas</p>
-            </li>
-            <li class="clase col-xs-12 col-md-6 col-lg-6">
-                <img src="./assets/img/clase-zumba.jpg" alt="clase zumba">
-                <h3>Zumba</h3>
-                <p>Martes y Jueves - 18:00 a 19:00 horas</p>
-            </li>
-            <li class="clase col-xs-12 col-md-6 col-lg-6">
-                <img src="./assets/img/clase-fitness.jpg" alt="clase fitness">
-                <h3>Fitness</h3>
-                <p>Lunes y Miércoles - 10:00 a 11:30 horas</p>
-            </li>
-            <li class="clase col-xs-12 col-md-6 col-lg-6">
-                <img src="./assets/img/clase-body.jpg" alt="clase body combat">
-                <h3>Body Combat</h3>
-                <p>Mates y Viernes - 20:00 a 21:00 horas</p>
-            </li>
-        </ul>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./assets/img/clase-pesas.jpg" alt="First slide">
+                    <div class="carousel-caption d-md-block">
+                        <h5>Levantamiento de pesas</h5>
+                        <p class="d-none d-md-block">Todos los días - 15:00 a 17:00 horas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./assets/img/clase-zumba.jpg" alt="Second slide">
+                    <div class="carousel-caption d-md-block">
+                        <h5>Zumba</h5>
+                        <p class="d-none d-md-block">Martes y Jueves - 18:00 a 19:00 horas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./assets/img/clase-fitness.jpg" alt="Third slide">
+                    <div class="carousel-caption d-md-block">
+                        <h5>Fitness</h5>
+                        <p class="d-none d-md-block">Lunes y Miércoles - 10:00 a 11:30 horas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./assets/img/clase-body.jpg" alt="Third slide">
+                    <div class="carousel-caption d-md-block">
+                        <h5>Body Combat</h5>
+                        <p class="d-none d-md-block">Mates y Viernes - 20:00 a 21:00 horas</p>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>    
+        </div>
+
         <div class="button">
             <a href="./views/clases.html">Ver todas las clases</a>
         </div>
@@ -244,7 +276,8 @@
             <li>
                 <a href="./assets/img/galeria3.jpg" data-lightbox="galeria">
                     <img src="./assets/img/galeria3.jpg" alt="imagen galeria">
-                </a>            </li>
+                </a>            
+            </li>
             <li>
                 <a href="./assets/img/galeria19.jpg" data-lightbox="galeria">
                     <img src="./assets/img/galeria19.jpg" alt="imagen galeria">
@@ -446,10 +479,11 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="js/jquery.animateNumber.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/lightbox.js"></script>

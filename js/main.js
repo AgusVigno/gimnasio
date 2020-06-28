@@ -27,7 +27,62 @@
 $(function(){
     var barraAltura = $('.barra').innerHeight();
     var slideIndex = 0;
-    
+    var slidesCargados = 0;
+
+    //si estoy en la pagina de inicio
+    if(document.getElementById('slider1')){
+        //loader hasta que carguen imagenes del slider
+        $('#slider1').imagesLoaded( { background: true }, function() {
+            slidesCargados++;
+            if(slidesCargados === 4){
+                ocultarLoader();
+            }
+        });
+        $('#slider2').imagesLoaded( { background: true }, function() {
+            slidesCargados++;
+            if(slidesCargados === 4){
+                ocultarLoader();
+            }
+        });
+        $('#slider3').imagesLoaded( { background: true }, function() {
+            slidesCargados++;
+            if(slidesCargados === 4){
+                ocultarLoader();
+            }
+        });
+        $('#slider4').imagesLoaded( { background: true }, function() {
+            slidesCargados++;
+            if(slidesCargados === 4){
+                ocultarLoader();
+            }
+        });
+
+        function ocultarLoader(){
+            document.querySelector('.loading').classList.remove('show');
+            setTimeout(function () {
+                document.querySelector('.loading').remove();
+            }, 1000);
+        }
+
+        //slider en el home
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides,3000);
+        }
+    }
+    //fin del loader en el inicio, con la carga del slider completo
+
     $(window).scroll(function(){
         var scroll = $(window).scrollTop();
         
@@ -55,21 +110,4 @@ $(function(){
         $('#resumenClick').css({display:'none'});
         $('.resumenBoton').remove();
     });
-
-    //slider en el home
-    showSlides();
-
-    function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if(slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides,3000);
-    }
 });
