@@ -1,2 +1,4 @@
 node_modules/
 leerme.txt
+.vscode/settings.json
+*.DS_Store
