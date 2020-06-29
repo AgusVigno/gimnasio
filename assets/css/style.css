@@ -1337,12 +1337,6 @@ p.copyright{
 .card__side--back-3 {
     background-image: linear-gradient(to right bottom, #3c6ef6, #0b49f3);
 }
-.card:active .card__side--front {
-    transform: rotateY(-180deg);
-}
-.card:active .card__side--back {
-    transform: rotateY(0);
-}
 @media (min-width: 768px) {
     .card:hover .card__side--front {
         transform: rotateY(-180deg);

@@ -195,7 +195,7 @@ $(function(){
         $('.resumenBoton').remove();
     });
 
-    var supports = (function() {
+    var parallax = (function() {
         var d = document.getElementsByClassName('resumen')[0],
             c = "ontouchstart" in window || navigator.msMaxTouchPoints;
         if (c) {
@@ -209,7 +209,41 @@ $(function(){
                 touch: false
             }
         }
-    })(); 
+    })();
+    
+    var cards = (function() {
+        var d = document.getElementsByClassName('card'),
+            c = "ontouchstart" in window || navigator.msMaxTouchPoints;
+        if (c) {
+            $('.card__side--front-1').on('click', function(){
+                $('.card__side--front-1').css({'transform': 'rotateY(-180deg)'})
+                $('.card__side--back-1').css({'transform': 'rotateY(0)'})
+            });
+            $('.card__side--front-2').on('click', function(){
+                $('.card__side--front-2').css({'transform': 'rotateY(-180deg)'})
+                $('.card__side--back-2').css({'transform': 'rotateY(0)'})
+            });
+            $('.card__side--front-3').on('click', function(){
+                $('.card__side--front-3').css({'transform': 'rotateY(-180deg)'})
+                $('.card__side--back-3').css({'transform': 'rotateY(0)'})
+            });
+            $('.card__side--back-1').on('click', function(){
+                $('.card__side--back-1').css({'transform': 'rotateY(180deg)'})
+                $('.card__side--front-1').css({'transform': 'rotateY(0)'})
+            });
+            $('.card__side--back-2').on('click', function(){
+                $('.card__side--back-2').css({'transform': 'rotateY(180deg)'})
+                $('.card__side--front-2').css({'transform': 'rotateY(0)'})
+            });
+            $('.card__side--back-3').on('click', function(){
+                $('.card__side--back-3').css({'transform': 'rotateY(180deg)'})
+                $('.card__side--front-3').css({'transform': 'rotateY(0)'})
+            });
+            return {
+                touch: true
+            }
+        } 
+    })();
 });
 
 
