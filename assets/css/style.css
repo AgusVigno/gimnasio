@@ -486,7 +486,7 @@ video {
 /* Seccion info resumen del gym */
 .resumen{
     height: 40rem;
-    background-image: url(../img/galeria15.png);
+    background-image: url(../img/gym-parallax.jpeg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -930,6 +930,12 @@ video {
     background-size: cover;
     margin-bottom: 5rem;
 }
+@media (min-width: 400px) {
+    .grid{
+        grid-template-columns: repeat(8, 5rem);
+        grid-template-rows: repeat(6, 10rem);
+    }    
+}
 @media (min-width: 768px) {
     .grid{
         grid-template-columns: repeat(10, 7.29rem);
@@ -987,10 +993,20 @@ video {
     z-index: 7;
     opacity: .4;
 }
+@media (min-width: 414px) {
+    .grid li:nth-child(3) img{
+        height: fill-available;
+        height: -webkit-fill-available;
+    }    
+}
 @media (min-width: 768px) {
     .grid li:nth-child(3) {
         grid-column: 1 / 6;
         grid-row: 1 / 4;
+        height: auto;
+    }
+    .grid li:nth-child(3) img{
+        height: auto;
     }
 }
 @media (min-width: 992px) {
