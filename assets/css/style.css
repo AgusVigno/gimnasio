@@ -10,6 +10,13 @@
     --grisClaro : #EBEBEB;
     --blanco : #FFFFFF;
     --negro : #000000;
+
+    /* Carousel Hover */
+    --carouselHeight : 200px;
+    --padding        : 8px;
+    --indicatorColor : #D82B6A;
+    --bodyBG         : #EEE;
+    --bgColor        : lighten(#EEE, 16);
 }
 
 html {
@@ -600,6 +607,130 @@ video {
     opacity: .8;
 }
 
+/* Seccion Instalaciones */
+.caroussel {
+    display: block;
+    -webkit-transform: translateZ(0);
+    height: 20rem;
+    margin: 5rem 10rem;
+    -webkit-overflow-scrolling: touch;
+}
+/* for tablets */
+.touch .caroussel {
+    overflow: auto;
+}
+.caroussel:before, 
+.caroussel:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 50px;
+    font-size: 80px;
+    line-height: 190px;
+    font-family: arial;
+    color: #555;
+    font-weight: bold;
+    pointer-events: none;
+    -webkit-transition: 0.2s ease-out;
+    transition: 0.2s ease-out;
+}
+.caroussel:before {
+    content: '\2039';
+    left: 0;
+    text-align: left;
+    text-indent: -20px;
+    box-shadow: 50px 0 20px -20px #EEE inset;
+}
+.caroussel:after {
+    content: '\203A';
+    right: 0;
+    text-align: right;
+    text-indent: 40px;
+    box-shadow: -50px 0 20px -20px #EEE inset;
+}
+.caroussel.right:after, .caroussel.left:before {
+    opacity: 1;
+}
+.caroussel.right:after {
+    right: 0;
+    text-indent: 60px;
+}
+.caroussel.left:before {
+    left: 0;
+    text-indent: -40px;
+}
+.caroussel > a {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    color: #CCC;
+    font-size: 1.5em;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+.caroussel > a:hover {
+    color: #FFF;
+}
+.caroussel > a.prev {
+    left: -20px;
+}
+.caroussel > a.next {
+    right: -20px;
+}
+.caroussel > .indicator {
+    pointer-events: none;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    background: var(--colorPrimario);
+    height: .4rem;
+    border-radius: 1rem;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, bottom 0.2s;
+    transition: opacity 0.2s, bottom 0.2s;
+}
+.caroussel:hover > .indicator {
+    opacity: 1;
+    bottom: -3rem;
+}
+.caroussel > .wrap {
+    overflow: hidden;
+    border-radius: 5px;
+}
+.caroussel > .wrap > ul {
+    list-style: none;
+    white-space: nowrap;
+    height: 200px;
+}
+.caroussel > .wrap > ul > li {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin: 0 0 0 5px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: 0.25s ease-out;
+    transition: 0.25s ease-out;
+}
+.caroussel > .wrap > ul > li:first-child {
+    margin: 0;
+}
+.caroussel > .wrap > ul > li > img {
+    display: block;
+    height: 100%;
+    margin: auto;
+    vertical-align: bottom;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+}
+  
 /* Seccion Blog */
 .blog .encabezado h2{
     font-size: 2rem;
@@ -620,7 +751,6 @@ video {
     margin-bottom: 2rem;
     overflow: hidden; 
 }
-
 .post img{
     transition: all .4s ease;
     width:100%;
@@ -1370,7 +1500,7 @@ p.copyright{
 }
 .clase h3{
     position: absolute;
-    left: 1rem;
+    left: 3rem;
     bottom: 4rem;
     color: var(--blanco);
     font-size: 2rem;
@@ -1381,14 +1511,13 @@ p.copyright{
 }
 @media (min-width: 992px) {
     .clase h3{
-        left: 3rem;
         font-size: 1.8rem;
     }
 }
 .clase p{
     position: absolute;
     bottom: 1rem;
-    left: 1rem;
+    left: 3rem;
     color: var(--blanco);
     font-size: 1.6rem;
     background-color: var(--negro);
@@ -1398,7 +1527,6 @@ p.copyright{
 @media (min-width: 992px) {
     .clase p{
         font-size: 1.6rem;
-        left: 3rem;
     }
 }
 .verClases{
