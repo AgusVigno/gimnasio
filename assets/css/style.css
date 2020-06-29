@@ -491,7 +491,6 @@ video {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    filter: brightness(.6);
 }
 .resumenInfo{
     display: none;
@@ -542,6 +541,10 @@ video {
         font-size: 2rem;
         padding: 2rem 4rem;
     }    
+}
+#resumenClick:hover{
+    cursor: pointer;
+    background-color: #E33000;
 }
 
 /* Seccion Instructores */
@@ -779,9 +782,11 @@ video {
         justify-content: flex-end;
     }
 }
-.button a:hover{
+.button a:hover,
+.blog .button a:hover{
     background-color: #e33000;
     cursor: pointer;
+    text-decoration: none;
 }
 .post h3{
     position: absolute;
@@ -1563,6 +1568,8 @@ p.copyright{
 }
 .clases .button a:hover{
     text-decoration: none;
+    background-color: #e33000;
+    cursor: pointer;
 }
 @media (min-width: 768px) {
     .clases .button a{
