@@ -1343,11 +1343,13 @@ p.copyright{
 .card:active .card__side--back {
     transform: rotateY(0);
 }
-.card:hover .card__side--front {
-    transform: rotateY(-180deg);
-}
-.card:hover .card__side--back {
-    transform: rotateY(0);
+@media (min-width: 768px) {
+    .card:hover .card__side--front {
+        transform: rotateY(-180deg);
+    }
+    .card:hover .card__side--back {
+        transform: rotateY(0);
+    }
 }
 .card__picture {
     background-size: cover;
