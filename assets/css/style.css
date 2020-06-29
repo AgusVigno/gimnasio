@@ -488,9 +488,13 @@ video {
     height: 40rem;
     background-image: url(../img/gym-parallax.jpeg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+@media (min-width: 768px) {
+    .no-touch.resumen{
+        background-attachment:fixed;
+    }    
 }
 .resumenInfo{
     display: none;

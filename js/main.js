@@ -104,7 +104,8 @@
     };
 
     // automatic binding to all elements which have the class that is assigned to "bindToClass"
-    $.fn.carousel();
+    $.fn.carousel();   
+
 })();
 
 $(function(){
@@ -193,6 +194,22 @@ $(function(){
         $('#resumenClick').css({display:'none'});
         $('.resumenBoton').remove();
     });
+
+    var supports = (function() {
+        var d = document.getElementsByClassName('resumen')[0],
+            c = "ontouchstart" in window || navigator.msMaxTouchPoints;
+        if (c) {
+            d.className += " touch";
+            return {
+                touch: true
+            }
+        } else {
+            d.className += " no-touch";
+            return {
+                touch: false
+            }
+        }
+    })(); 
 });
 
 
