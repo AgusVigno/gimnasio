@@ -169,11 +169,7 @@ video {
         width: 13rem;
     }    
 }
-.navegacionPrincipal a:hover{
-    background-color: var(--colorPrimario);
-    padding: 1rem .5rem;
-    border-radius: .5rem;
-}
+
 
 /* Menu Movil */
 .menuMovil{
@@ -256,22 +252,15 @@ video {
     top: 0;
     left: 0;
     z-index: 2000000;
-    opacity: .9;
     background-color: var(--blanco);
     transition: all .7s ease-in-out;
 }
 .fixed nav a{
-    background-color: var(--colorPrimario);
-    border: 1px solid var(--colorPrimario);
-    border-radius: 1rem;
-    font-size: 1.2rem;
-    margin: 1rem auto;
+    color: var(--negro);
     width: 15rem;
     padding: .4rem;
 }
-.fixed nav a:hover{
-    background-color: #E33000;
-}
+
 @media (min-width: 768px) {
     .fixed nav a{
         width: 8rem;
@@ -282,7 +271,6 @@ video {
 @media (min-width: 992px) {
     .fixed nav a{
         width: 12rem;
-        margin-right: 1.5rem;
     }    
 }
 .barra img{
@@ -292,7 +280,7 @@ video {
 }
 @media (min-width: 768px) {
     .barra img{
-        width: 15rem;
+        width: 12rem;
     }
 }
 .contenidoHeader{
@@ -1299,6 +1287,8 @@ p.copyright{
     perspective: 150rem;
     position: relative;
     margin-bottom: 3rem;
+    background-color: transparent;
+    border: none;
 }
 @media (min-width: 768px) {
     .card{
