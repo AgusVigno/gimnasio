@@ -1,0 +1,126 @@
+.navegacionPrincipal{
+	display: none;
+    width: 100%;
+    flex: 0 0 100%;
+    margin: 0 auto;
+    a{
+        display: block;
+        max-width: 100%;
+        font-family: var(--fuentePrincipal);
+        font-weight: bold;
+        font-size: 1.8rem;
+        padding: 1rem 2rem;
+        color: var(--blanco);
+        text-align: center;
+        text-transform: uppercase;
+        transition: all .5s ease-in-out;
+        text-decoration: none;
+    }
+    @media only screen and (min-width: 768px) {
+        flex: 0 0 80%;
+        display: block;
+        width: 67%;
+        float: right;
+        text-align: right;
+        padding-right: 2rem;
+        a{
+            padding: 1rem 1rem;
+            display: inline-block;
+            width: auto;
+            text-align: center;
+            margin: .5rem 2rem 0 0;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: 1.6rem;
+        width: 13rem;
+    }
+}
+.barra{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width:100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    a{
+        flex: 0 0 50%;
+    }
+    div{
+        flex: 0 0 15%;
+    }
+    img{
+        width: 8rem;
+        margin: 1rem 3rem;
+        flex: 0 0 50%;
+    }
+    @media only screen and (min-width: 768px) {
+        a {
+            flex: 0 0 20%;
+        }
+        img{
+            width: 12rem;
+        }
+    }
+}
+
+.header-main {
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 2rem;
+        max-width: 33rem;
+        text-align: center;
+        line-height: 2;
+        margin-top: 7rem;
+    }
+    @media only screen and (min-width: 992px) {
+        h1{
+            font-size: 8rem;
+        }
+        p{
+            max-width: 43rem;
+        }
+    }
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    background-color: var(--blanco);
+    transition: all .7s ease-in-out;
+    nav a{
+        color: var(--negro);
+        width: 15rem;
+        padding: .4rem;
+    }
+}
+.fixed nav a{
+    @media only screen and (min-width: 768px) {
+        width: 8rem;
+        padding: 1rem 0;
+        margin-right: 1rem;
+    }    
+    @media only screen and (min-width: 992px) {
+        width: 12rem;
+    }
+}
+.contenidoHeader{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blanco);
+    h1{
+        text-align: center;
+    } 
+    p{
+        margin: 0 auto;
+    }
+}

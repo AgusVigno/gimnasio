@@ -1,0 +1,18 @@
+/* icono whatsapp */
+a.whatsapp__flotante{
+	position:fixed;
+	width:6rem;
+	height:6rem;
+	bottom:4rem;
+	right:4rem;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:5rem;
+	text-align:center;
+    font-size:3rem;
+	box-shadow: .2rem .2rem .3rem #999;
+    z-index:1150;
+    i {
+        margin-top: 1.6rem;
+    }
+}

@@ -1,0 +1,25 @@
+.menuMovil{
+	display: block;
+	width: 6rem;
+	float: right;
+	text-align: right;
+    margin: 1rem 2rem;
+    &:hover{
+        cursor: pointer;
+    }
+    span{
+        background-color: var(--negro);
+        margin-top: .4rem;
+        width: 5rem;
+        height: .5rem;
+        display: block;
+    }
+    @media (min-width: 768px) {
+        display: none;
+        span{
+            background-color: var(--blanco);
+            margin-top: .6rem;
+            height: .8rem;
+        }
+    }
+}

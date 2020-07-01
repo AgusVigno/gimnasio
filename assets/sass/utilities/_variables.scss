@@ -1,0 +1,20 @@
+:root {
+    /** Fuentes **/
+    --fuentePrincipal: 'Roboto', sans-serif;
+    --fuenteSecundaria: 'Oswald', sans-serif;
+    --fuenteTexto : 'Open Sans', sans-serif;
+
+    /** Colores **/
+    --colorPrimario : #FE4918;
+    --grisOscuro : #2F2E2E;
+    --grisClaro : #EBEBEB;
+    --blanco : #FFFFFF;
+    --negro : #000000;
+
+    /* Carousel Hover */
+    --carouselHeight : 20rem;
+    --padding        : .8rem;
+    --indicatorColor : #FE4918;
+    --bodyBG         : #EEE;
+    --bgColor        : lighten(#EEE, 16);
+}

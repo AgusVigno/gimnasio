@@ -1,0 +1,67 @@
+.header__contacto{
+    background-color: var(--grisOscuro);
+    height: 10rem;
+    .menuMovil {
+        span{
+            background-color: var(--blanco);
+        }
+    }
+}
+.contacto{
+    background-image: url(../img/contacto.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 70rem;
+    h2,
+    p{
+        color: var(--blanco);
+    }
+}
+.formulario__contacto{
+    margin: 4rem 0;
+}
+.input-group {
+    margin-bottom: 3rem;
+}
+.input-group span,
+.input-group input{
+    font-size: 1.6rem;
+    background-color: transparent;
+    color: var(--blanco);
+    &::placeholder{
+        color: var(--blanco);
+    }
+    &:focus{
+        background-color: transparent;
+        font-size: 1.8rem;
+        color: var(--blanco);
+    }
+}
+.input-group textarea{
+    background-color: transparent;
+    height: 20rem;
+    &:focus{
+        background-color: transparent;
+        font-size: 1.8rem;
+        color: var(--blanco);
+    }
+}
+.formulario__contacto .button{
+    color: var(--blanco);
+    background-color: transparent;
+    padding: 1rem 2rem;
+    border: 1px solid var(--blanco);
+    float: right;
+    margin-right: 1.5rem;
+    border-radius: .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:hover{
+        background-color: #E33000;
+        cursor: pointer;
+    }
+}
+.formulario__newsletter{
+    padding-left: 1.5rem;
+    color: var(--blanco);
+}
