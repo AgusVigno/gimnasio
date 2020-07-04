@@ -35,7 +35,8 @@
     background-color: var(--blanco);
 }
 .card__side--back {
-    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);;
+            transform: rotateY(180deg);
 }
 .card__side--back-1 {
     background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
@@ -47,10 +48,12 @@
     background-image: linear-gradient(to right bottom, #3c6ef6, #0b49f3);
 }
 .card:hover .card__side--front {
-    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
 }
 .card:hover .card__side--back {
-    transform: rotateY(0);
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
 }
 .card__picture {
     background-size: cover;
@@ -112,6 +115,7 @@
     width: 90%;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     text-align: center;
 }
@@ -142,16 +146,19 @@
     cursor: pointer;
 }
 .btn:hover {
-    transform: translateY(-0.3rem);
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     &::after {
-        transform: scaleX(1.4) scaleY(1.6);
+        -webkit-transform: scaleX(1.4) scaleY(1.6);
+                transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
     }
 }
 .btn:active, 
 .btn:focus {
-    transform: translateY(-0.1rem);
+    -webkit-transform: translateY(-0.1rem);
+            transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 .btn::after {

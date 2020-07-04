@@ -3,9 +3,9 @@
 @import 'utilities/mixins';
 @import 'utilities/helpers';
 
-@import 'vendors/bootstrap';
-
 @import 'base/reset';
+
+@import 'vendors/lightbox';
 
 @import 'layout/header';
 @import 'layout/footer';
