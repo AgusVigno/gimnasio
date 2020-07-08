@@ -1,8 +1,5 @@
 .header__clases{
-    background-image: url(../img/header2.jpg);
-    background-position: center center;
-    background-size: cover;
-    height: 30rem;
+    @include img-header(url(../img/header2.jpg));
 }
 .page-item a{
     background-color: var(--grisClaro);

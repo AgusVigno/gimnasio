@@ -1,3 +1,6 @@
-/*
-    Se incluirán los mixins
-*/
+@mixin img-header($path) {
+    background-image: $path;
+    background-position: center center;
+    background-size: cover;
+    height: 30rem;
+}
