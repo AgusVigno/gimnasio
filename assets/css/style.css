@@ -1589,7 +1589,7 @@ video {
   justify-content: space-between; }
 
 .contenidoEntrenamiento p,
-.contenidoEntrenamiento video {
+.contenidoEntrenamiento iframe {
   flex: 0 0 100%; }
 
 .contenidoEntrenamiento p {
@@ -1601,8 +1601,8 @@ video {
 
 @media (min-width: 992px) {
   .contenidoEntrenamiento p,
-  .contenidoEntrenamiento video {
-    flex: 0 0 calc(50% - 5rem); }
+  .contenidoEntrenamiento iframe {
+    flex: 0 0 calc(50% - 2rem); }
   .contenidoEntrenamiento p {
     padding: 2rem;
     font-size: 1.8rem; }
