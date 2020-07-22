@@ -221,14 +221,16 @@ $(document).ready(function(){
             scrollTop:'0px'
         },1000);
     });
-
+    
     $(window).scroll(function(){
         if ($(this).scrollTop() > 0) {
             $('a.whatsapp__flotante').slideDown(300);
             $('.footer__ir-arriba').slideDown(300);
+            $('.socio a').slideDown(300);
         } else {
             $('a.whatsapp__flotante').slideUp(300);                
             $('.footer__ir-arriba').slideUp(300);                
+            $('.socio a').slideUp(300);                
         }
     });
 });

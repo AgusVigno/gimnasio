@@ -1099,7 +1099,8 @@ html {
   /* evita que los elementos crezcan de tamaño al agregarle margin o padding */
   box-sizing: border-box;
   font-size: 62.5%;
-  /* reset para usar REMs donde 1rem = 10px */ }
+  /* reset para usar REMs donde 1rem = 10px */
+  scroll-behavior: smooth; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -1856,6 +1857,22 @@ video {
   @media (min-width: 768px) {
     .numero {
       font-size: 10rem; } }
+
+.socio a {
+  display: none;
+  position: fixed;
+  top: 40%;
+  width: 7rem;
+  height: 7rem;
+  font-size: 2.2rem;
+  color: var(--blanco);
+  background-color: var(--colorPrimario);
+  z-index: 1050;
+  text-align: center;
+  left: 1rem; }
+  .socio a:hover {
+    text-decoration: none;
+    background-color: #E33000; }
 
 .header__nosotros {
   background-image: url(../img/header5.jpg);
