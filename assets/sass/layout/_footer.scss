@@ -150,7 +150,8 @@ p.copyright{
     color: var(--blanco);
 	padding: 1rem 0;
 	text-align: center;
-	background-color: #2e2e2e;
+    background-color: #2e2e2e;
+    margin-bottom: 0;
     @media (min-width: 768px) {
         margin-top: 2rem;
     }
@@ -161,7 +162,7 @@ p.copyright{
 }
 .footer__ir-arriba{
     display: none;
-    padding: 2rem;
+    padding: 1rem;
     font-size: 2rem;
     color: var(--blanco);
     background-color: var(--colorPrimario);
@@ -169,7 +170,12 @@ p.copyright{
     bottom: 1rem;
     right: 1rem;
     z-index: 1050;
+    opacity: .6;
     &:hover{
         cursor: pointer;
+    }
+    @media (min-width: 768px){
+        padding: 2rem;
+        opacity: 1;
     }
 }

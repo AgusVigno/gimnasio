@@ -355,6 +355,48 @@
         </div>
     </section>
 
+    <!-- seccion de imagenes por proximidad -->
+    <section class="pe-container">
+        <ul id="pe-thumbs" class="pe-thumbs">
+            <li><a href="#"><img src="./assets/img/thumbs/1.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/2.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/3.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/4.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/5.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/6.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/7.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/8.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/9.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/10.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/11.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/12.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/13.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/14.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/15.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/16.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/17.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/18.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/19.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/20.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/21.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/22.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/23.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/24.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/25.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/26.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/27.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/28.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/29.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/30.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/31.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/32.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/33.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/34.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/35.jpg" /></a></li>
+            <li><a href="#"><img src="./assets/img/thumbs/36.jpg" /></a></li>
+        </ul>
+    </section>
+
     <!-- seccion de card con precios -->
     <section id="socios" class="seccion contenedor ">
         <div class="encabezado">
@@ -512,5 +554,90 @@
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript" src="js/jquery.proximity.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            
+            var Photo	= (function() {
+                    
+                    // list of thumbs
+                var $list		= $('#pe-thumbs'),
+                    // the images
+                    $elems		= $list.find('img'),
+                    // maxScale : maximum scale value the image will have
+                    // minOpacity / maxOpacity : minimum (set in the CSS) and maximum values for the image's opacity
+                    settings	= {
+                        maxScale	: 1.4,
+                        maxOpacity	: 0.9,
+                        minOpacity	: Number( $elems.css('opacity') )
+                    },
+                    init		= function() {
+                        
+                        // minScale will be set in the CSS
+                        settings.minScale = _getScaleVal() || 1;
+                        _initEvents();
+                    
+                    },
+                    // Get Value of CSS Scale through JavaScript:
+                    // http://css-tricks.com/get-value-of-css-rotation-through-javascript/
+                    _getScaleVal= function() {
+                    
+                        var st = window.getComputedStyle($elems.get(0), null),
+                            tr = st.getPropertyValue("-webkit-transform") ||
+                                 st.getPropertyValue("-moz-transform") ||
+                                 st.getPropertyValue("-ms-transform") ||
+                                 st.getPropertyValue("-o-transform") ||
+                                 st.getPropertyValue("transform") ||
+                                 "fail...";
+
+                        if( tr !== 'none' ) {	 
+
+                            var values = tr.split('(')[1].split(')')[0].split(','),
+                                a = values[0],
+                                b = values[1],
+                                c = values[2],
+                                d = values[3];
+
+                            return Math.sqrt( a * a + b * b );
+                        
+                        }
+                        
+                    },
+                    _initEvents	= function() {
+                        
+                        // the proximity event
+                        $elems.on('proximity.Photo', { max: 80, throttle: 10, fireOutOfBounds : true }, function( event, proximity, distance ) {
+                            
+                            var $el			= $(this),
+                                $li			= $el.closest('li'),
+                                scaleVal	= proximity * ( settings.maxScale - settings.minScale ) + settings.minScale,
+                                scaleExp	= 'scale(' + scaleVal + ')';
+                            
+                            // change the z-index of the element once it reaches the maximum scale value
+                            ( scaleVal === settings.maxScale ) ? $li.css( 'z-index', 1000 ) : $li.css( 'z-index', 1 );
+                            
+                            $el.css({
+                                '-webkit-transform'	: scaleExp,
+                                '-moz-transform'	: scaleExp,
+                                '-o-transform'		: scaleExp,
+                                '-ms-transform'		: scaleExp,
+                                'transform'			: scaleExp,
+                                'opacity'			: ( proximity * ( settings.maxOpacity - settings.minOpacity ) + settings.minOpacity )
+                            });
+
+                        });
+                    
+                    }
+                
+                return {
+                    init	: init
+                };
+            
+            })();
+            
+            Photo.init();
+            
+        });
+    </script>
 </body>
 </html>

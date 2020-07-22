@@ -223,13 +223,19 @@ $(document).ready(function(){
     });
     
     $(window).scroll(function(){
-        if ($(this).scrollTop() > 0) {
+        if ($(this).scrollTop() > 0 && $(this).scrollTop() < 9000) {
             $('a.whatsapp__flotante').slideDown(300);
-            $('.footer__ir-arriba').slideDown(300);
-            $('.socio a').slideDown(300);
-        } else {
+        } else {                     
             $('a.whatsapp__flotante').slideUp(300);                
-            $('.footer__ir-arriba').slideUp(300);                
+        }
+        if ($(this).scrollTop() > 0) {
+            $('.footer__ir-arriba').slideDown(300);
+        } else {
+            $('.footer__ir-arriba').slideUp(300);                                          
+        }
+        if ($(this).scrollTop() > 800) {
+            $('.socio a').slideDown(300);
+        } else {              
             $('.socio a').slideUp(300);                
         }
     });
