@@ -213,4 +213,22 @@ $(function(){
     });
 });
 
+//Icono que dirige hacia arriba del homepage
+$(document).ready(function(){
 
+    $('.footer__ir-arriba').click(function(){
+        $('body, html').animate({
+            scrollTop:'0px'
+        },1000);
+    });
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 0) {
+            $('a.whatsapp__flotante').slideDown(300);
+            $('.footer__ir-arriba').slideDown(300);
+        } else {
+            $('a.whatsapp__flotante').slideUp(300);                
+            $('.footer__ir-arriba').slideUp(300);                
+        }
+    });
+});

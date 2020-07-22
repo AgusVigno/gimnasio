@@ -744,6 +744,22 @@ p.copyright {
   @media (min-width: 768px) {
     p.copyright {
       margin-top: 2rem; } }
+  p.copyright a {
+    color: var(--colorPrimario);
+    text-decoration: none; }
+
+.footer__ir-arriba {
+  display: none;
+  padding: 2rem;
+  font-size: 2rem;
+  color: var(--blanco);
+  background-color: var(--colorPrimario);
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1050; }
+  .footer__ir-arriba:hover {
+    cursor: pointer; }
 
 .menuMovil {
   display: block;
@@ -839,11 +855,12 @@ p.copyright {
 
 /* icono whatsapp */
 a.whatsapp__flotante {
+  display: none;
   position: fixed;
   width: 6rem;
   height: 6rem;
-  bottom: 4rem;
-  right: 4rem;
+  bottom: 1rem;
+  right: 10rem;
   background-color: #25d366;
   color: #FFF;
   border-radius: 5rem;

@@ -154,4 +154,22 @@ p.copyright{
     @media (min-width: 768px) {
         margin-top: 2rem;
     }
+    a{
+        color: var(--colorPrimario);
+        text-decoration: none;
+    }
+}
+.footer__ir-arriba{
+    display: none;
+    padding: 2rem;
+    font-size: 2rem;
+    color: var(--blanco);
+    background-color: var(--colorPrimario);
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1050;
+    &:hover{
+        cursor: pointer;
+    }
 }
