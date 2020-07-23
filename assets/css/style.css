@@ -521,7 +521,8 @@ body.lb-disable-scrolling {
     text-align: center;
     text-transform: uppercase;
     transition: all .5s ease-in-out;
-    text-decoration: none; }
+    text-decoration: none;
+    margin: 0 auto; }
   @media only screen and (min-width: 768px) {
     .navegacionPrincipal {
       flex: 0 0 80%;
@@ -594,15 +595,19 @@ body.lb-disable-scrolling {
     width: 15rem;
     padding: .4rem; }
 
-@media only screen and (min-width: 768px) {
-  .fixed nav a {
-    width: 8rem;
-    padding: 1rem 0;
-    margin-right: 1rem; } }
-
-@media only screen and (min-width: 992px) {
-  .fixed nav a {
-    width: 12rem; } }
+.fixed nav a {
+  padding: 2rem; }
+  .fixed nav a:hover {
+    background-color: var(--colorPrimario);
+    color: var(--blanco); }
+  @media only screen and (min-width: 768px) {
+    .fixed nav a {
+      width: 8rem;
+      padding: 1rem 0;
+      margin-right: 1rem; } }
+  @media only screen and (min-width: 992px) {
+    .fixed nav a {
+      width: 12rem; } }
 
 .contenidoHeader {
   height: 100vh;

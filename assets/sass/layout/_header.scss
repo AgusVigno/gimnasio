@@ -15,6 +15,7 @@
         text-transform: uppercase;
         transition: all .5s ease-in-out;
         text-decoration: none;
+        margin: 0 auto;
     }
     @media only screen and (min-width: 768px) {
         flex: 0 0 80%;
@@ -102,6 +103,11 @@
     }
 }
 .fixed nav a{
+    padding: 2rem;
+    &:hover{
+        background-color: var(--colorPrimario);
+        color: var(--blanco);
+    }
     @media only screen and (min-width: 768px) {
         width: 8rem;
         padding: 1rem 0;
