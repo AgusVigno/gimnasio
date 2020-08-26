@@ -15,7 +15,7 @@
         }
 
         // Cuenta Regresiva
-        $('.contador').countdown('2020/08/21 10:00:00', function(event){
+        $('.contador').countdown('2020/10/21 10:00:00', function(event){
             $('#dias').html(event.strftime('%D'));
             $('#horas').html(event.strftime('%H'));
             $('#minutos').html(event.strftime('%M'));
